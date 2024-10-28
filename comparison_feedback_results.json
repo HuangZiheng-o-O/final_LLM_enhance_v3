@@ -1,0 +1,13 @@
+[
+  {
+    "action_description": "A person walks in a clockwise circle, while holding their right hand & arm up throughout the motion.",
+    "gold_standard": "The man is walking clockwise in a circle while holding something up to his ear with his left arm.",
+    "output": {
+      "Spine": false,
+      "Left_Arm": true,
+      "Right_Arm": true,
+      "Left_Leg": false,
+      "Right_Leg": false
+    }
+  }
+]

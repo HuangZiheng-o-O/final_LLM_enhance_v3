@@ -1,0 +1,468 @@
+{
+  "Action": "The person performs a rowing motion with their legs spread wide.",
+  "Sequence Explanation": "step1: The man's legs spread wide apart to establish a stable base, while his arms move back to prepare for the rowing motion.  \nstep2: The man's arms pull toward his torso in a rowing motion as his legs push down against the ground, engaging the core for stability.  \nstep3: The man's arms extend forward while his legs return to their initial position, ready to repeat the rowing motion.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm moves back toward his torso."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm moves back toward his torso."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is pressed down against the ground while spread wide."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is pressed down against the ground while spread wide."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine maintains an upright position during the motion."
+    }
+  ]
+}
+{
+  "Action": "A woman hops forward while holding a T-pose.",
+  "Sequence Explanation": "Step 1: The woman’s feet push off the ground, creating upward momentum while her arms maintain the T-pose, extending straight out to the sides.\n\nStep 2: The woman's legs bend slightly at the knees while she lands forward, ensuring balanced support as she transitions from the hop.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The woman's left arm is extended straight out to the side."
+    },
+    {
+      "body part": "right arm",
+      "description": "The woman's right arm is extended straight out to the side."
+    },
+    {
+      "body part": "left leg",
+      "description": "The woman's left leg is bent slightly at the knee during the landing."
+    },
+    {
+      "body part": "right leg",
+      "description": "The woman's right leg is bent slightly at the knee during the landing."
+    },
+    {
+      "body part": "spine",
+      "description": "The woman's spine is upright and slightly leaned forward during the hop."
+    }
+  ]
+}
+{
+  "Action": "The man executes a jump spin mid-air.",
+  "Sequence Explanation": "Step 1: The man bends his knees and swings his arms downward to build momentum before jumping off the ground. \n\nStep 2: The man pushes off the ground explosively, extending his legs and lifting his body into the air while initiating a spin by rotating his torso and arms. \n\nStep 3: The man's legs and arms continue to rotate around his center of gravity as he stabilizes his position mid-air, preparing for the landing.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm is swung downward then raised outward to assist in spinning."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm is swung downward then lifted outward to maintain momentum in the spin."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is bent at the knee as he prepares to push off the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is bent at the knee and then extends explosively as he jumps into the air."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine rotates in coordination with his torso as he spins mid-air."
+    }
+  ]
+}
+{
+  "Action": "A person crawls on the ground in a baby-like motion.",
+  "Sequence Explanation": "Step 1: The man supports his weight on his hands and knees, ensuring his shoulders are over his hands and hips are over his knees.  \nStep 2: The man moves his right hand forward while simultaneously shifting his left knee forward, maintaining a low position, and then repeats this with the opposite limbs, creating a rhythmic crawling motion.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm moves forward in a straight line, keeping the elbow slightly bent."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm moves forward in a straight line, keeping the elbow slightly bent."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg shifts forward, keeping the knee bent and foot close to the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg shifts forward, keeping the knee bent and foot close to the ground."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine maintains a straight posture, supported by his arms and legs."
+    }
+  ]
+}
+{
+  "Action": "A dancer spins gracefully in a ballet twirl.",
+  "Sequence Explanation": "Step 1: The dancer's feet push off the ground, initiating a strong pivot on the ball of one foot, while the other leg is extended gracefully, preparing for the spin.\n\nStep 2: The dancer's torso rotates with controlled momentum, engaging the core muscles to maintain balance, while the arms extend outward before gracefully transitioning to a rounded position above the head to enhance the rotation.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The dancer's left arm extends outward at shoulder height."
+    },
+    {
+      "body part": "right arm",
+      "description": "The dancer's right arm moves to a rounded position above the head."
+    },
+    {
+      "body part": "left leg",
+      "description": "The dancer's left leg is extended gracefully to the side."
+    },
+    {
+      "body part": "right leg",
+      "description": "The dancer's right leg pivots strongly on the ball of the foot."
+    },
+    {
+      "body part": "spine",
+      "description": "The dancer's spine rotates smoothly in alignment with the torso."
+    }
+  ]
+}
+{
+  "Action": "The computer science student attempts one-armed push-ups.",
+  "Sequence Explanation": "Step 1: The student's body is positioned face down, with one arm placed directly beneath the shoulder and the other arm resting along the side or off the ground.\n\nStep 2: The student engages the core muscles to stabilize the body, then pushes down with the supporting arm while lifting the body upward, maintaining a straight line from head to heels.\n\nStep 3: The student lowers the body back down by bending the supporting arm, ensuring that the body remains aligned and stable throughout the movement.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The student's left arm is positioned straight and supporting the body beneath the shoulder."
+    },
+    {
+      "body part": "right arm",
+      "description": "The student's right arm is straightened along the side of the body or off the ground."
+    },
+    {
+      "body part": "left leg",
+      "description": "The student's left leg is extended straight back, lying flat on the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The student's right leg is extended straight back along the same plane as the left leg."
+    },
+    {
+      "body part": "spine",
+      "description": "The student's spine is maintained in a straight line from the head to the heels."
+    }
+  ]
+}
+{
+  "Action": "The soccer player covers their ears during a goal celebration.",
+  "Sequence Explanation": "step1: The player raises their arms above their head, creating a wide stance to emphasize the celebration.  \nstep2: The player's hands move downward to cover their ears while their body maintains an upright posture, balancing the movement.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm is raised above his head with the elbow slightly bent."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm is raised above his head with the elbow slightly bent."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is planted firmly on the ground, providing stability."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is planted firmly on the ground, providing stability."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine is maintained in an upright position throughout the movement."
+    }
+  ]
+}
+{
+  "Action": "A dad crawls on the floor to retrieve his child’s toy.",
+  "Sequence Explanation": "step1: The dad lowers himself to the ground, bending at the knees and hips while placing his hands on the floor for stability.  \nstep2: The dad shifts his weight forward, leading with his hands as he propels his body forward on his hands and knees, coordinating his arms and legs to maintain balance.  \nstep3: The dad reaches out with one hand to grasp the toy, adjusting his body position as needed to ensure a secure grip while keeping his other hand and knees firmly on the floor for support.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm is positioned on the floor, supporting his weight."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm is extended forward, propelling his body as he crawls."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is bent at the knee and positioned on the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is bent at the knee and positioned on the ground."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine is flexed to lower his torso toward the ground."
+    }
+  ]
+}
+{
+  "Action": "The police officer sprints to chase someone on foot.",
+  "Sequence Explanation": "Step 1: The police officer's legs propel forward rapidly, generating powerful strides while maintaining a low center of gravity for stability.  \nStep 2: The police officer's arms pump back and forth in coordination with the legs, providing momentum and balance throughout the sprint.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm pumps backward from the shoulder in a rapid motion."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm pumps forward from the shoulder in a swift motion."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg strides forward with a powerful push off the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg strides forward while lifting off the ground."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine leans slightly forward to maintain a low center of gravity."
+    }
+  ]
+}
+{
+  "Action": "A bodybuilder performs a perfect pistol squat.",
+  "Sequence Explanation": "step1: The man stands upright on one leg while extending the opposite leg forward, engaging his core for balance.  \nstep2: The man's knee on the standing leg bends as he lowers his body into a squat, keeping his extended leg straight and parallel to the ground.  \nstep3: The man's body descends until his thigh is parallel to the floor, ensuring his weight is centered over the standing leg, before pushing through the heel to return to the starting position.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm is extended forward, parallel to the ground."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm is positioned at his side, steady and relaxed."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is lifted off the ground, held straight and extended forward."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is bent at the knee as he lowers his body into the squat."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine is upright and engages to maintain balance throughout the movement."
+    }
+  ]
+}
+{
+  "Action": "The person performs a rowing motion with their legs spread wide.",
+  "Sequence Explanation": "step1: The man initiates the rowing motion by bending his knees and pushing through his heels while leaning slightly forward at the hips, maintaining wide leg positioning for stability.  \nstep2: The man's arms pull back simultaneously, engaging his back and shoulders, while his legs extend and then repeat the motion by pulling his legs back in, coordinating with the arm movements to create a fluid rowing action.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm pulls back with the elbow bent at a 90-degree angle."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm pulls back in a mirrored motion to the left arm, also bent at the elbow."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg extends fully straight after bending at the knee."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg mirrors the left leg by extending fully straight after bending at the knee."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine leans slightly forward at the hips, maintaining an upright position."
+    }
+  ]
+}
+{
+  "Action": "A woman hops forward while holding a T-pose.",
+  "Sequence Explanation": "Step 1: The woman jumps off the ground, propelling herself upward while keeping her legs slightly bent at the knees. \n\nStep 2: The woman's arms extend sideways to form a T-pose as she lands softly on the ground, ensuring stability and balance with her feet landing shoulder-width apart.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The woman's left arm extends sideways horizontally to shoulder height."
+    },
+    {
+      "body part": "right arm",
+      "description": "The woman's right arm extends sideways horizontally to shoulder height."
+    },
+    {
+      "body part": "left leg",
+      "description": "The woman's left leg is slightly bent at the knee as she propels herself upward."
+    },
+    {
+      "body part": "right leg",
+      "description": "The woman's right leg is slightly bent at the knee as she propels herself upward."
+    },
+    {
+      "body part": "spine",
+      "description": "The woman's spine is straightened upward during the jump and slightly relaxes as she lands."
+    }
+  ]
+}
+{
+  "Action": "The man executes a jump spin mid-air.",
+  "Sequence Explanation": "step1: The man crouches down to generate power, bending his knees and shifting his weight onto his heels.  \nstep2: The man pushes off the ground explosively with his legs, extending his arms upward while initiating a rotational movement of his torso to begin the jump spin.  \nstep3: The man's body rotates around the vertical axis in mid-air, with his arms extended for balance and legs tucked in to facilitate the spin.  \nstep4: The man prepares to land by extending his legs downward while slowing the rotation, positioning his feet to make contact with the ground evenly.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm is extended upward during the jump."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm is extended upward during the jump."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is bent at the knee and tucked in during the spin."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is bent at the knee and tucked in during the spin."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine rotates around the vertical axis as he spins."
+    }
+  ]
+}
+{
+  "Action": "A person crawls on the ground in a baby-like motion.",
+  "Sequence Explanation": "Step 1: The man positions his hands and knees on the ground, ensuring his shoulders are aligned above his hands and his hips above his knees. \n\nStep 2: The man's right hand moves forward while his left knee simultaneously shifts forward, creating a coordinated crawling motion. \n\nStep 3: The man continues to alternate his movements, bringing his left hand forward as his right knee advances, maintaining a stable base and a low center of gravity throughout the action.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm moves forward in a straight line, maintaining a slight bend at the elbow."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm shifts forward in a straight line, keeping the elbow slightly bent."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg moves forward, bending at the knee as it lifts off the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg advances forward, bending at the knee and slightly lifting from the ground."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine remains aligned and slightly curved forward as he moves."
+    }
+  ]
+}
+{
+  "Action": "A dancer spins gracefully in a ballet twirl.",
+  "Sequence Explanation": "step1: The dancer initiates the ballet twirl by positioning their feet in a turned-out stance, with one foot leading while simultaneously engaging the core for stability.  \nstep2: The dancer spins gracefully by pivoting on the leading foot, while the other leg lifts and extends to create a streamlined line, using the arms for balance as they rotate.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The dancer's left arm is extended horizontally to the side."
+    },
+    {
+      "body part": "right arm",
+      "description": "The dancer's right arm is raised above the head, slightly bent at the elbow."
+    },
+    {
+      "body part": "left leg",
+      "description": "The dancer's left leg is extended outward, straight and parallel to the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The dancer's right leg is pivoted on the leading foot, maintaining a turned-out position."
+    },
+    {
+      "body part": "spine",
+      "description": "The dancer's spine is elongated and remains upright, providing stability during the twirl."
+    }
+  ]
+}
+{
+  "Action": "A person crawls on the ground in a baby-like motion.",
+  "Sequence Explanation": "step1: The man positions himself on all fours, placing his hands flat on the ground while his knees are bent and resting on the floor.  \nstep2: The man's right hand and left knee move forward simultaneously, followed by the left hand and right knee, creating a coordinated crawling motion.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm is extended forward with the elbow slightly bent, palm flat on the ground."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm is extended forward with the elbow slightly bent, palm flat on the ground."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is bent at the knee and positioned on the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is bent at the knee and positioned on the ground."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine is arched slightly with the torso lifted up."
+    }
+  ]
+}
+{
+  "Action": "The person performs a rowing motion with their legs spread wide.",
+  "Sequence Explanation": "Step 1: The man's legs are spread wide apart, stabilizing his lower body while engaging his core muscles for balance. \n\nStep 2: The man's arms pull back in a rowing motion, simultaneously bending his elbows and bringing the elbows close to his body while his shoulders retract, engaging his upper back.\n\nStep 3: The man's legs push down and slightly extend as his arms finish the rowing motion, creating a coordinated fluid movement that brings the body back to the starting position.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm pulls back in a rowing motion, bending at the elbow and positioning close to his body."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm pulls back in a rowing motion, bending at the elbow and positioning close to his body."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg pushes down into the ground and slightly extends."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg pushes down into the ground and slightly extends."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine maintains a neutral position, with slight retraction occurring in the upper back as the arms pull back."
+    }
+  ]
+}
+{
+  "Action": "The person performs a rowing motion with their legs spread wide.",
+  "Sequence Explanation": "Step 1: The man's legs are spread wide apart, providing a stable base as he initiates a rowing motion by driving his legs downwards while leaning slightly forward.\n\nStep 2: The man's arms extend forward and pull the imaginary oar back towards his body, engaging his core and maintaining balance as his torso opens up with each pull.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm extends forward with the elbow slightly bent."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm pulls back towards his body with the elbow bent as if gripping an oar."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg pushes downwards against the ground."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg drives downward to assist in the rowing motion."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine leans slightly forward as he begins the rowing action."
+    }
+  ]
+}
