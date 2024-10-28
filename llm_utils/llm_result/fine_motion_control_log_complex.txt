@@ -1,0 +1,8 @@
+========================Action: The person performs a rowing motion with their legs spread wide.
+Sequence Explanation:
+step1: The man sits with his legs spread wide, anchoring his feet firmly on the ground.  
+step2: The man's arms extend forward, grasping an imaginary oar, while he pulls the oar back towards his torso, simultaneously leaning back slightly to engage his core.  
+step3: The man's legs push against the ground as he drives forward, extending his legs while the arms return to the starting position, ready for the next stroke.
+Control Results:
+[{'body part': 'left arm', 'description': "The man's left arm extends forward, reaching out as if grasping an oar."}, {'body part': 'right arm', 'description': "The man's right arm pulls the imaginary oar back towards his torso."}, {'body part': 'left leg', 'description': "The man's left leg remains anchored to the ground, spread wide."}, {'body part': 'right leg', 'description': "The man's right leg is also anchored to the ground, spread wide."}, {'body part': 'spine', 'description': "The man's spine leans back slightly as he engages his core."}]
+

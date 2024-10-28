@@ -360,7 +360,7 @@ def analyze_fine_moton_control_txt(action):
         "Sequence Explanation": sequence_explanation,
         "Fine Motion Control Evaluation": control_results
     }
-    with open("fine_control_complex.txt", "a") as file:
+    with open("llm_result/fine_control_complex.txt", "a") as file:
         file.write(json.dumps(output2, ensure_ascii=False, indent=2))
         file.write("\n")
 

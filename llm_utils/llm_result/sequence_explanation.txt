@@ -1,0 +1,53 @@
+Action: 
+The person performs a rowing motion with their legs spread wide.
+Sequence Explanation: 
+step1: The man's legs are positioned wide apart, providing a stable base as he begins the rowing motion, engaging his thighs and hips to initiate the movement.  
+step2: The man's arms pull back in a rowing motion while his back engages, coordinating with his legs to provide propulsion, resulting in a dynamic full-body exercise.
+Fine Motion Control Steps: 
+{
+    "step1": [
+        {
+            "body part": "left arm",
+            "description": "The man's left arm is extended backward, aligned with his shoulder."
+        },
+        {
+            "body part": "right arm",
+            "description": "The man's right arm is extended backward, aligned with his shoulder."
+        },
+        {
+            "body part": "left leg",
+            "description": "The man's left leg is spread wide, stabilizing his base."
+        },
+        {
+            "body part": "right leg",
+            "description": "The man's right leg is spread wide, stabilizing his base."
+        },
+        {
+            "body part": "spine",
+            "description": "The man's spine maintains an upright position, slightly leaning forward."
+        }
+    ],
+    "step2": [
+        {
+            "body part": "left arm",
+            "description": "The man's left arm pulls back in a rowing motion."
+        },
+        {
+            "body part": "right arm",
+            "description": "The man's right arm pulls back in a rowing motion."
+        },
+        {
+            "body part": "left leg",
+            "description": "The man's left leg pushes down into the ground for propulsion."
+        },
+        {
+            "body part": "right leg",
+            "description": "The man's right leg pushes down into the ground for propulsion."
+        },
+        {
+            "body part": "spine",
+            "description": "The man's spine arches slightly backward, engaging the back muscles."
+        }
+    ]
+}
+

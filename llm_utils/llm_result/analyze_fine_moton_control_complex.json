@@ -1,0 +1,22 @@
+[
+  {
+    "body part": "left arm",
+    "description": "The man's left arm extends forward, reaching out as if grasping an oar."
+  },
+  {
+    "body part": "right arm",
+    "description": "The man's right arm pulls the imaginary oar back towards his torso."
+  },
+  {
+    "body part": "left leg",
+    "description": "The man's left leg remains anchored to the ground, spread wide."
+  },
+  {
+    "body part": "right leg",
+    "description": "The man's right leg is also anchored to the ground, spread wide."
+  },
+  {
+    "body part": "spine",
+    "description": "The man's spine leans back slightly as he engages his core."
+  }
+]
