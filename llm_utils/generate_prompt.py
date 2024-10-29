@@ -557,17 +557,21 @@ For each body part, identify discrepancies between the two descriptions and prov
 }}
 
 </OUTPUT>
+ 
 
-请你仔细判断动作本身是否是需要修改，而不是通过比较描述的相似度。举个例子
-    description1 = 
+Carefully judge whether the action itself needs modification, rather than comparing the similarity of descriptions. For example:
+
+**Description 1**:  
 The person performs a rowing motion with their legs spread wide.
-    description2 = 
-The man sits on a stable surface with his legs spread wide apart and engages his core while leaning forward slightly.  After that,the man's arms pull back in a rowing motion while simultaneously pushing his legs outward, resulting in a coordinated back and leg movement that mimics the action of rowing.
-这两个动作其实是一个动作,只不过下面一个更加的详细，所以不需要修改，每一个part都是false.
-这个例子给我们一个启发：如果一个description是另外一个description的一个子集，那么这个part就不需要修改，否则就需要修改。
 
+**Description 2**:  
+The man sits on a stable surface with his legs spread wide apart and engages his core while leaning forward slightly. After that, the man's arms pull back in a rowing motion while simultaneously pushing his legs outward, resulting in a coordinated back and leg movement that mimics the action of rowing.
 
-需要修改仅仅是因为description1和description2有不一样的地方，比如description1需要举起右手，但是description2要求摇摆右手，这样两个动作存在冲突，所以需要修改。
+These two descriptions refer to the same action; the second one is simply more detailed, so no modification is needed, and each part should be marked as 'false'.
+ This example gives us an insight: if one description is a subset of another, then that part does not need to be modified; otherwise, it requires modification.
+
+Modification is necessary only when there are differences between Description 1 and Description 2. For example, if Description 1 requires raising the right hand while Description 2 specifies swinging the right hand, then there is a conflict between the two actions, and modification is needed.
+
 <example>
     description1 = 
     A person walks in a  circle, while shaking his right hand throughout the motion.
