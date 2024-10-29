@@ -24,3 +24,55 @@
     }
   ]
 }
+{
+  "Action": "The person performs a rowing motion with their legs spread wide.",
+  "Sequence Explanation": "Step 1: The man initiates the rowing motion by bending his knees slightly and planting his feet firmly on the ground, ensuring stability with his legs spread wide.\n\nStep 2: The man's arms extend forward, grasping the imaginary oars as he pulls them toward his torso, engaging his back and core muscles while simultaneously leaning back slightly to follow through the movement.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm extends forward and then pulls back toward his torso in a rowing motion."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm extends forward and then pulls back toward his torso in a rowing motion."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg remains firmly planted on the ground, supporting his position."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg remains firmly planted on the ground, supporting his position."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine leans back slightly as he pulls his arms toward his torso."
+    }
+  ]
+}
+{
+  "Action": "The person performs a rowing motion with their legs spread wide.",
+  "Sequence Explanation": "step1: The man bends his knees while keeping his legs spread wide, positioning his feet firmly on the ground to create a stable base.  \nstep2: The man's arms pull back dynamically as he engages his back and shoulder muscles, mimicking a rowing motion, while his torso leans slightly back to maintain balance.  \nstep3: The man's legs remain engaged and stable as he pushes through his heels to emphasize the propulsion aspect of the rowing motion, working in sync with his arm movements.",
+  "Fine Motion Control Evaluation": [
+    {
+      "body part": "left arm",
+      "description": "The man's left arm pulls back sharply, straightening out as it moves toward his torso."
+    },
+    {
+      "body part": "right arm",
+      "description": "The man's right arm pulls back dynamically, extending outward and bending at the elbow as it mimics rowing."
+    },
+    {
+      "body part": "left leg",
+      "description": "The man's left leg is bent at the knee, pressing firmly into the ground to provide stability."
+    },
+    {
+      "body part": "right leg",
+      "description": "The man's right leg is also bent at the knee, pushing through the heel for propulsion."
+    },
+    {
+      "body part": "spine",
+      "description": "The man's spine leans slightly back, maintaining a straight posture while adapting to the rowing motion."
+    }
+  ]
+}

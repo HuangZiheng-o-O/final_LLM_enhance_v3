@@ -51,3 +51,109 @@ Fine Motion Control Steps:
     ]
 }
 
+Action: 
+The person performs a rowing motion with their legs spread wide.
+Sequence Explanation: 
+1. The man stabilizes his torso and initiates the rowing motion by bending at the knees, engaging his legs outward to create a wide stance.  
+2. The man's arms pull back in a coordinated movement simulating rowing, while his legs remain spread wide, allowing for balance and proper body mechanics as he engages his core to maintain posture.
+Fine Motion Control Steps: 
+{
+    "step1": [
+        {
+            "body part": "left arm",
+            "description": "The man's left arm is extended backward in a pulling motion."
+        },
+        {
+            "body part": "right arm",
+            "description": "The man's right arm is extended backward in a pulling motion."
+        },
+        {
+            "body part": "left leg",
+            "description": "The man's left leg is bent at the knee and spread outwards."
+        },
+        {
+            "body part": "right leg",
+            "description": "The man's right leg is bent at the knee and spread outwards."
+        },
+        {
+            "body part": "spine",
+            "description": "The man's spine is extended upright for stability."
+        }
+    ],
+    "step2": [
+        {
+            "body part": "left arm",
+            "description": "The man's left arm remains stationary at its full extension while anchoring the torso."
+        },
+        {
+            "body part": "right arm",
+            "description": "The man's right arm remains stationary at its full extension while anchoring the torso."
+        },
+        {
+            "body part": "left leg",
+            "description": "The man's left leg remains bent and spread outward for balance."
+        },
+        {
+            "body part": "right leg",
+            "description": "The man's right leg remains bent and spread outward for balance."
+        },
+        {
+            "body part": "spine",
+            "description": "The man's spine maintains a stable upright position."
+        }
+    ]
+}
+
+Action: 
+The person performs a rowing motion with their legs spread wide.
+Sequence Explanation: 
+step1: The man sits on a stable surface with his legs spread wide apart and engages his core while leaning forward slightly.  
+step2: The man's arms pull back in a rowing motion while simultaneously pushing his legs outward, resulting in a coordinated back and leg movement that mimics the action of rowing.
+Fine Motion Control Steps: 
+{
+    "step1": [
+        {
+            "body part": "left arm",
+            "description": "The man's left arm is positioned down at his side, ready to pull."
+        },
+        {
+            "body part": "right arm",
+            "description": "The man's right arm is extended forward, preparing to pull back."
+        },
+        {
+            "body part": "left leg",
+            "description": "The man's left leg is spread wide and remains steady."
+        },
+        {
+            "body part": "right leg",
+            "description": "The man's right leg is also spread wide and remains steady."
+        },
+        {
+            "body part": "spine",
+            "description": "The man's spine is slightly leaning forward, maintaining a tall posture."
+        }
+    ],
+    "step2": [
+        {
+            "body part": "left arm",
+            "description": "The man's left arm pulls back in a rowing motion."
+        },
+        {
+            "body part": "right arm",
+            "description": "The man's right arm pulls back in a rowing motion."
+        },
+        {
+            "body part": "left leg",
+            "description": "The man's left leg pushes outward, engaging in the rowing motion."
+        },
+        {
+            "body part": "right leg",
+            "description": "The man's right leg pushes outward, engaging in the rowing motion."
+        },
+        {
+            "body part": "spine",
+            "description": "The man's spine maintains stability while the upper body leans slightly back."
+        }
+    ]
+}
+

@@ -1,24 +1,25 @@
+#%%
 import os
 import openai
 import yaml
+
 import re
+
+
 import json
 import re
 
-from nltk.data import retrieve
+# Load API key from a YAML configuration file
+with open("config.yaml") as f:
+ config_yaml = yaml.load(f, Loader=yaml.FullLoader)
 
+# Initialize the OpenAI client with the API key
+client = openai.OpenAI(api_key=config_yaml['token'])
+
+# Set the model name
+MODEL = "gpt-4o-mini"
 
 def llm(prompt, stop=["\n"]):
-    # Load API key from a YAML configuration file
-    with open("config.yaml") as f:
-        config_yaml = yaml.load(f, Loader=yaml.FullLoader)
-
-    # Initialize the OpenAI client with the API key
-    client = openai.OpenAI(api_key=config_yaml['token'])
-
-    # Set the model name
-    MODEL = "gpt-4o-mini"
-
     # Prepare the dialog for the API request
     dialogs = [{"role": "user", "content": prompt}]
 
@@ -28,13 +29,14 @@ def llm(prompt, stop=["\n"]):
     )
     return completion.choices[0].message.content
 
-
 def get_single_sentence(original_action):
+    
+ 
     prompt = f"""
      I want to refrase the action description "{original_action}" in to a simpler and clear and clean sentence. 
      The sentence should start with " A parson ... " and should be easy to understand and should only use words from the words list blow.
      A word can be used as long as it is mentioned in the **words_list**, regardless of its form. For example, if "walking" is in the **words_list**, then "walks" can also be used.
-
+     
      <words_list>
      words = [
     'the', 'to', 'a', 'then', 'their', 'right', 'his', 'forward', 'with', 'walks', 'left', 'in', 'is', 'up', 'arms', 
@@ -100,11 +102,11 @@ def get_single_sentence(original_action):
     'limping'
 ]
      </words_list>
-
+     
      The output can only be one sentence:" A parson ... " 
      The output can only be one sentence:" A parson ... " 
      do NOT add any other description!
-
+     
      you should only use words from the words_list
      you should only use words from the words_list
      you should only use words from the words_list
@@ -112,19 +114,16 @@ def get_single_sentence(original_action):
     <END_SIGNAL>
     - When your sentence is finished, signal completion by saying '<DONE>'.
     </END_SIGNAL>
-
+     
     """
-
+    
     return prompt
-
-
-
-def retrieve(action):
+    
+def sequence_analyze(action):
     result = get_single_sentence(action)
     result1 = llm(result, stop=["<DONE>"]).split("<DONE>")[0].strip()
-    # print(result1)
+    print(result1)
     return result1
-
 
 actions_to_test = [
     "The person performs a rowing motion with their legs spread wide.",
@@ -139,7 +138,7 @@ actions_to_test = [
     "A bodybuilder performs a perfect pistol squat."
 ]
 
-# for action in actions_to_test:
-#     retrieve(action)
+for action in actions_to_test:
+    sequence_analyze(action)
+    
 
-# retrieve("A person crawls on the ground in a baby-like motion.")

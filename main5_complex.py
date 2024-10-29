@@ -1,22 +1,25 @@
+
 import os
 import openai
 import yaml
+
 import re
+
+
 import json
 import re
 
+# Load API key from a YAML configuration file
+with open("config.yaml") as f:
+ config_yaml = yaml.load(f, Loader=yaml.FullLoader)
+
+# Initialize the OpenAI client with the API key
+client = openai.OpenAI(api_key=config_yaml['token'])
+
+# Set the model name
+MODEL = "gpt-4o-mini"
 
 def llm(prompt, stop=["\n"]):
-    # Load API key from a YAML configuration file
-    with open("config.yaml") as f:
-        config_yaml = yaml.load(f, Loader=yaml.FullLoader)
-
-    # Initialize the OpenAI client with the API key
-    client = openai.OpenAI(api_key=config_yaml['token'])
-
-    # Set the model name
-    MODEL = "gpt-4o-mini"
-
     # Prepare the dialog for the API request
     dialogs = [{"role": "user", "content": prompt}]
 
@@ -26,12 +29,12 @@ def llm(prompt, stop=["\n"]):
     )
     return completion.choices[0].message.content
 
-
 def generate_sequence_explanation_prompt(original_action):
+    
     """
     Generate a prompt for the LLM to think about fine motion control for a given action.
     :param original_action: Perform a signature James Bond pose with a dramatic turn and gunpoint.
-    :return:
+    :return: 
     :example:
     The man pivots on his heel, shifting his weight to turn his body sharply while extending his opposite arm outward, creating a dramatic stance.
     The man's wrist flexes as he raises his hand to point the imaginary gun forward, aligning his arm with his shoulder for precision and balance.
@@ -43,40 +46,40 @@ def generate_sequence_explanation_prompt(original_action):
     You should independently decide the steps involved in completing this action.
 
     After thinking, provide a structured list of the steps involved in performing this action.
-
+    
     <original_action>
     {original_action}
     </original_action>
-
-
+    
+    
     <REQUIREMENT>
     - Focus on describing the dynamic movement.
     - Highlight the necessary coordination between body parts.
     -Emphasize the importance of actions: Clearly require that each step must include key movement details, avoiding redundancy. 
     -Streamline the steps: Remind that the generated steps should be merged as much as possible, ensuring each step contains actual dynamic movements rather than empty descriptions.
-
+    
         <FORMAT>
-
+    
         The number of steps should be 1 or 2 or 3 or 4, depending on the TEMPORAL complexity of the action.Do not use too many steps if the action is simple. 2~3 steps are usually enough.  
-
+         
          eg. 'run in a circle with one hand swinging',even if the action is complex by Spatial Composition, it is simple by Temporal. Apparently there is only one step of action and don't need to provide multiple steps. In this case, you can just provide one step. 
-
+          
         For each step, use the words 'The man...'or 'The man's ...(body part)' to describe the action.
         Ensure the explanation is like:
         step1: The ...
         step2: The ...
         ...
-
+        
         </FORMAT>
     </REQUIREMENT>
+    
 
-
-
+    
     <EXCLUSION>
     - Do not include any description of facial expressions or emotions.
     - Focus solely on the action and movement itself.
     </EXCLUSION>
-
+    
     <END_SIGNAL>
     - When your explanation is finished, signal completion by saying '<SEQUENCEEND>'.
     </END_SIGNAL>
@@ -85,21 +88,20 @@ def generate_sequence_explanation_prompt(original_action):
     """
     return prompt
 
-
-def generate_sequence_explanation_prompt_json(original_action, sequence_explanation_prompt):
+def generate_sequence_explanation_prompt_json(original_action,sequence_explanation_prompt):
     prompt = f"""
 <TASK>
 Based on your breakdown of the action and the most important original_action, evaluate fine motion control for the following body parts:
-
+ 
     <original_action>
     {original_action}
     </original_action>
-
+  
     <breakdown of the action>
     {sequence_explanation_prompt}
     </breakdown of the action>  
-
-
+    
+       
     <BODY_PARTS>
     - spine
     - Left Arm
@@ -107,7 +109,7 @@ Based on your breakdown of the action and the most important original_action, ev
     - Left Leg
     - Right Leg
     </BODY_PARTS>
-
+    
 
 </TASK>
 
@@ -201,6 +203,7 @@ Be concise and AVOID providing any reasoning or explanation—focus only on the 
 When you finish the explanation for all steps, say '<SEQUENCEEND>'.
 </END_SIGNAL>
     """
+    
 
 
 def sequence_analyze(action):
@@ -232,6 +235,40 @@ def sequence_analyze(action):
     # Return results as well
     return sequence_explanation, sequence_explanation2
 
+# txt = sequence_analyze("Perform a signature James Bond pose with a dramatic turn and gunpoint.")
+# print("done")
+
+# actions_to_test = [
+#     "Perform a signature James Bond pose with a dramatic turn and gunpoint.",
+#     # "Fight with the fluid precision and power of Bruce Lee.",
+#     # "Perform a graceful spinning kick in the style of Jet Li.",
+#     # "Execute a stealthy crouch and roll like a ninja.",
+#     # "Leap over an obstacle with the agility of a parkour expert.",
+#     # "Perform a slow-motion dive while firing two handguns like in an action movie.",
+#     # "Execute a precise sword slash followed by a defensive stance like a samurai.",
+#     # "Jump from a ledge and roll upon landing to minimize impact, as seen in martial arts films.",
+#     # "Perform a quick disarm move to take an opponent’s weapon away.",
+#     # "Perform a quick, tactical reload of a firearm while maintaining a defensive stance."
+# ]
+actions_to_test = [
+    "The person performs a rowing motion with their legs spread wide.",
+    # "A woman hops forward while holding a T-pose.",
+    # "The man executes a jump spin mid-air.",
+    # "A person crawls on the ground in a baby-like motion.",
+    # "A dancer spins gracefully in a ballet twirl.",
+    # "The computer science student attempts one-armed push-ups.",
+    # "The soccer player covers their ears during a goal celebration.",
+    # "A dad crawls on the floor to retrieve his child’s toy.",
+    # "The police officer sprints to chase someone on foot.",
+    # "A bodybuilder performs a perfect pistol squat."
+]
+
+
+
+ 
+#for action in actions_to_test:
+#    sequence_explanation, sequence_explanation2 = sequence_analyze(action)
+   
 
 def generate_fine_motion_control_prompt(original_action, sequence_explanation):
     prompt = f"""
@@ -333,7 +370,8 @@ def analyze_fine_moton_control_txt(action):
     sequence_explanation_prompt = generate_sequence_explanation_prompt(action)
     sequence_explanation = llm(sequence_explanation_prompt, stop=["<SEQUENCEEND>"]).split("<SEQUENCEEND>")[0].strip()
     print(sequence_explanation)
-
+    
+    
     # Step 2: Evaluate fine motion control
     fine_moton_control_prompt = generate_fine_motion_control_prompt(action, sequence_explanation)
     control_evaluation = llm(fine_moton_control_prompt, stop=["<CONTROLEND>"]).split("<CONTROLEND>")[0].strip()
@@ -354,13 +392,14 @@ def analyze_fine_moton_control_txt(action):
     with open("analyze_fine_moton_control_complex.json", "a") as file:
         json.dump(output, file, ensure_ascii=False, indent=2)
         file.write("\n")
-
+        
+        
     output2 = {
-        "Action": action,
-        "Sequence Explanation": sequence_explanation,
-        "Fine Motion Control Evaluation": control_results
-    }
-    with open("llm_result/fine_control_complex.txt", "a") as file:
+            "Action": action,
+            "Sequence Explanation": sequence_explanation,
+            "Fine Motion Control Evaluation": control_results
+        }
+    with open("fine_control_complex.txt", "a") as file:
         file.write(json.dumps(output2, ensure_ascii=False, indent=2))
         file.write("\n")
 
@@ -369,4 +408,54 @@ def analyze_fine_moton_control_txt(action):
 
     # Return results as well
     return sequence_explanation, control_results
+
+# actions_to_test = [
+#     "Perform a signature James Bond pose with a dramatic turn and gunpoint.",
+#     "Fight with the fluid precision and power of Bruce Lee.",
+#     "Perform a graceful spinning kick in the style of Jet Li.",
+#     # "Execute a stealthy crouch and roll like a ninja.",
+#     # "Leap over an obstacle with the agility of a parkour expert.",
+#     # "Perform a slow-motion dive while firing two handguns like in an action movie.",
+#     # "Execute a precise sword slash followed by a defensive stance like a samurai.",
+#     # "Jump from a ledge and roll upon landing to minimize impact, as seen in martial arts films.",
+#     # "Perform a quick disarm move to take an opponent’s weapon away.",
+#     # "Perform a quick, tactical reload of a firearm while maintaining a defensive stance."
+# ]
+actions_to_test = [
+    "The person performs a rowing motion with their legs spread wide.",
+    "A woman hops forward while holding a T-pose.",
+    "The man executes a jump spin mid-air.",
+    "A person crawls on the ground in a baby-like motion.",
+    "A dancer spins gracefully in a ballet twirl.",
+    "The computer science student attempts one-armed push-ups.",
+    "The soccer player covers their ears during a goal celebration.",
+    "A dad crawls on the floor to retrieve his child’s toy.",
+    "The police officer sprints to chase someone on foot.",
+    "A bodybuilder performs a perfect pistol squat."
+]
+
+
+
+ 
+
+# Test each action and save the results in the fine_control.txt file
+for action in actions_to_test:
+    sequence_explanation, control_results = analyze_fine_moton_control_txt(action)
+    
+    # Append the result to the fine_control.txt file
+    with open("fine_motion_control_log_complex.txt", "a") as file:
+        # Append both the sequence explanation and control results
+        file.write("========================")
+        file.write("Action: " + action + "\n")  # Write the action description
+        file.write("Sequence Explanation:\n" + sequence_explanation + "\n")  # Write the sequence explanation
+        file.write("Control Results:\n" + control_results.__str__() + "\n\n")  # Write the fine motion control results
+
+
+
+
+
+
+
+
+
 

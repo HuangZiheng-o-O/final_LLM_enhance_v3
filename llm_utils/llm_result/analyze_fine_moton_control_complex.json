@@ -20,3 +20,47 @@
     "description": "The man's spine leans back slightly as he engages his core."
   }
 ]
+[
+  {
+    "body part": "left arm",
+    "description": "The man's left arm extends forward and then pulls back toward his torso in a rowing motion."
+  },
+  {
+    "body part": "right arm",
+    "description": "The man's right arm extends forward and then pulls back toward his torso in a rowing motion."
+  },
+  {
+    "body part": "left leg",
+    "description": "The man's left leg remains firmly planted on the ground, supporting his position."
+  },
+  {
+    "body part": "right leg",
+    "description": "The man's right leg remains firmly planted on the ground, supporting his position."
+  },
+  {
+    "body part": "spine",
+    "description": "The man's spine leans back slightly as he pulls his arms toward his torso."
+  }
+]
+[
+  {
+    "body part": "left arm",
+    "description": "The man's left arm pulls back sharply, straightening out as it moves toward his torso."
+  },
+  {
+    "body part": "right arm",
+    "description": "The man's right arm pulls back dynamically, extending outward and bending at the elbow as it mimics rowing."
+  },
+  {
+    "body part": "left leg",
+    "description": "The man's left leg is bent at the knee, pressing firmly into the ground to provide stability."
+  },
+  {
+    "body part": "right leg",
+    "description": "The man's right leg is also bent at the knee, pushing through the heel for propulsion."
+  },
+  {
+    "body part": "spine",
+    "description": "The man's spine leans slightly back, maintaining a straight posture while adapting to the rowing motion."
+  }
+]

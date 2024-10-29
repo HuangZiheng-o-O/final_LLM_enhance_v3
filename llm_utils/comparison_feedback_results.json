@@ -1,0 +1,27 @@
+[
+  {
+    "body part": "spine",
+    "issue": "The spine movement is not described in `description1`.",
+    "editing command": "The man's spine remains upright as he walks in a clockwise circle."
+  },
+  {
+    "body part": "left arm",
+    "issue": "In `description1`, the left arm is not mentioned, whereas it is holding something up to the ear in `description2`.",
+    "suggestion": "The man's left arm is raised and holding something up to his ear."
+  },
+  {
+    "body part": "right arm",
+    "issue": "In `description1`, the right arm is raised, but `description2` indicates a different action with the left arm.",
+    "suggestion": "The man's right arm is positioned up, while his left arm is raised to hold something to his ear."
+  },
+  {
+    "body part": "left leg",
+    "issue": "The left leg is not mentioned in `description1`, but movements referring to both legs are implied in `description2`.",
+    "suggestion": "The man's left leg steps in a circular motion as he walks."
+  },
+  {
+    "body part": "right leg",
+    "issue": "The right leg is described in `description1` by the action of walking, but the left leg's role is unspecified in the context of walking in a circle.",
+    "suggestion": "The man's right leg also participates in the circular walking motion while maintaining a stable position."
+  }
+]

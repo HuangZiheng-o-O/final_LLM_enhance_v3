@@ -7,7 +7,7 @@ import re
 from llm_utils import generate_sequence_explanation_prompt
 from llm_utils import generate_fine_motion_control_prompt
 from llm_utils import generate_sequence_explanation_prompt_json
-from llm_utils import llm
+from llm_config  import llm
 
 def analyze_fine_moton_control_txt(action):
     # Step 1: Get sequence explanation
