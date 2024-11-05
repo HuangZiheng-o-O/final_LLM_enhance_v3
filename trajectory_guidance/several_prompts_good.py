@@ -29,6 +29,7 @@ def replace_placeholders(instruct_content: str, descriptions: List[str]) -> str:
     for i, description in enumerate(descriptions):
         instruct_content = instruct_content.replace(f"placeholder{i + 1}", description.strip())
     return instruct_content
+
 def format_keyframes(keyframes: list, pattern_name="origin_30points",keyframes_str = "keyframes_str") -> str:
     pattern_name = pattern_name+"_"+keyframes_str
     # Initialize the formatted string with the pattern name
@@ -391,9 +392,6 @@ def inside(
 
 
     return root_linear_velocity
-
-
-
 
 
 def log_results(result_file_path: str, descriptions: List[str], result: str):

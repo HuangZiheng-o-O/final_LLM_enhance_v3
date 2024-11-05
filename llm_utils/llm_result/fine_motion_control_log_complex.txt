@@ -20,5 +20,9 @@ step1: The man bends his knees while keeping his legs spread wide, positioning h
 step2: The man's arms pull back dynamically as he engages his back and shoulder muscles, mimicking a rowing motion, while his torso leans slightly back to maintain balance.  
 step3: The man's legs remain engaged and stable as he pushes through his heels to emphasize the propulsion aspect of the rowing motion, working in sync with his arm movements.
 Control Results:
-[{'body part': 'left arm', 'description': "The man's left arm pulls back sharply, straightening out as it moves toward his torso."}, {'body part': 'right arm', 'description': "The man's right arm pulls back dynamically, extending outward and bending at the elbow as it mimics rowing."}, {'body part': 'left leg', 'description': "The man's left leg is bent at the knee, pressing firmly into the ground to provide stability."}, {'body part': 'right leg', 'description': "The man's right leg is also bent at the knee, pushing through the heel for propulsion."}, {'body part': 'spine', 'description': "The man's spine leans slightly back, maintaining a straight posture while adapting to the rowing motion."}]
+[{'body part': 'left arm', 'description': "The man's left arm pulls back sharply, straightening out as it moves toward his torso."},
+ {'body part': 'right arm', 'description': "The man's right arm pulls back dynamically, extending outward and bending at the elbow as it mimics rowing."},
+  {'body part': 'left leg', 'description': "The man's left leg is bent at the knee, pressing firmly into the ground to provide stability."},
+  {'body part': 'right leg', 'description': "The man's right leg is also bent at the knee, pushing through the heel for propulsion."},
+  {'body part': 'spine', 'description': "The man's spine leans slightly back, maintaining a straight posture while adapting to the rowing motion."}]
 

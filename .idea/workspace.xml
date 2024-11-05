@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="edit suggestion.ipynb">
-      <change afterPath="$PROJECT_DIR$/11111.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparison_feedback_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/comparison_feedback_results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/edit5.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="add trajectory part" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -35,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -44,7 +41,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/HuangZiheng-o-O/final_LLM_enhance_v2.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/HuangZiheng-o-O/final_LLM_enhance_v3.git&quot;,
     &quot;accountId&quot;: &quot;ff7d116b-cbee-4df7-b3ed-958bad73e5f8&quot;
   }
 }</component>
@@ -57,27 +54,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Retrieval_based_solution.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/huangziheng/PycharmProjects/final_LLM_enhance 2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Retrieval_based_solution.executor": "Run",
+    "Python.several_prompts_good.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/llm_utils" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/llm_utils" />
+      <recent name="$PROJECT_DIR$/llm_utils/llm_result" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.several_prompts_good">
     <configuration name="retrieval_based_solution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="final_LLM_enhance 2" />
       <option name="ENV_FILES" value="" />
@@ -101,8 +106,56 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="several_prompts_good" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="final_LLM_enhance_v3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trajectory_guidance" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="final_LLM_enhance_v3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm_utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm_utils/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.several_prompts_good" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.retrieval_based_solution" />
       </list>
     </recent_temporary>
@@ -136,6 +189,11 @@
       <workItem from="1729492032258" duration="21195000" />
       <workItem from="1729822081867" duration="2170000" />
       <workItem from="1729934858073" duration="2267000" />
+      <workItem from="1730114410340" duration="13285000" />
+      <workItem from="1730166563361" duration="3109000" />
+      <workItem from="1730451804378" duration="9943000" />
+      <workItem from="1730607632064" duration="9863000" />
+      <workItem from="1730810797511" duration="1192000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -169,7 +227,79 @@
       <option name="project" value="LOCAL" />
       <updated>1729492839010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <option name="closed" value="true" />
+      <created>1730114450146</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730114450146</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1730114488497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730114488497</updated>
+    </task>
+    <task id="LOCAL-00007" summary="init">
+      <option name="closed" value="true" />
+      <created>1730114518163</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730114518163</updated>
+    </task>
+    <task id="LOCAL-00008" summary="many delete">
+      <option name="closed" value="true" />
+      <created>1730115424152</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730115424152</updated>
+    </task>
+    <task id="LOCAL-00009" summary="llm_utils">
+      <option name="closed" value="true" />
+      <created>1730117262316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730117262316</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finish">
+      <option name="closed" value="true" />
+      <created>1730163615927</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730163615927</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finish">
+      <option name="closed" value="true" />
+      <created>1730163647215</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730163647215</updated>
+    </task>
+    <task id="LOCAL-00012" summary="finish">
+      <option name="closed" value="true" />
+      <created>1730165115344</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730165115344</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add trajectory part">
+      <option name="closed" value="true" />
+      <created>1730166621342</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730166621342</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,9 +321,16 @@
     <MESSAGE value="readme" />
     <MESSAGE value="Retrieval-based solution.ipynb" />
     <MESSAGE value="edit suggestion.ipynb" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit suggestion.ipynb" />
+    <MESSAGE value="init" />
+    <MESSAGE value="many delete" />
+    <MESSAGE value="llm_utils" />
+    <MESSAGE value="finish" />
+    <MESSAGE value="add trajectory part" />
+    <option name="LAST_COMMIT_MESSAGE" value="add trajectory part" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/final_LLM_enhance_v3$test.coverage" NAME="test Coverage Results" MODIFIED="1730117181699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/llm_utils" />
+    <SUITE FILE_PATH="coverage/final_LLM_enhance_v3$several_prompts_good.coverage" NAME="several_prompts_good Coverage Results" MODIFIED="1730811784032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_2$Retrieval_based_solution.coverage" NAME="Retrieval_based_solution Coverage Results" MODIFIED="1728558862303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

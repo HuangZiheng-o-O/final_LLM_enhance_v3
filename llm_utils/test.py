@@ -33,15 +33,15 @@ from llm_utils import test_generate_comparison_feedback
 # ]
 actions_to_test = [
     "The person performs a rowing motion with their legs spread wide.",
-    # "A woman hops forward while holding a T-pose.",
-    # "The man executes a jump spin mid-air.",
-    # "A person crawls on the ground in a baby-like motion.",
-    # "A dancer spins gracefully in a ballet twirl.",
-    # "The computer science student attempts one-armed push-ups.",
-    # "The soccer player covers their ears during a goal celebration.",
-    # "A dad crawls on the floor to retrieve his child’s toy.",
-    # "The police officer sprints to chase someone on foot.",
-    # "A bodybuilder performs a perfect pistol squat."
+    "A woman hops forward while holding a T-pose.",
+    "The man executes a jump spin mid-air.",
+    "A person crawls on the ground in a baby-like motion.",
+    "A dancer spins gracefully in a ballet twirl.",
+    "The computer science student attempts one-armed push-ups.",
+    "The soccer player covers their ears during a goal celebration.",
+    "A dad crawls on the floor to retrieve his child’s toy.",
+    "The police officer sprints to chase someone on foot.",
+    "A bodybuilder performs a perfect pistol squat."
 ]
 
 for action in actions_to_test:

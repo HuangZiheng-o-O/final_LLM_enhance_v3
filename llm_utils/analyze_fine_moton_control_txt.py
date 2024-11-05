@@ -16,7 +16,7 @@ def analyze_fine_moton_control_txt(action):
     print(sequence_explanation)
 
     # Step 2: Evaluate fine motion control
-    fine_moton_control_prompt = generate_fine_motion_control_prompt(action, sequence_explanation)
+    fine_moton_control_prompt = generate_fine_motion_control_prompt(action, "none")
     control_evaluation = llm(fine_moton_control_prompt, stop=["<CONTROLEND>"]).split("<CONTROLEND>")[0].strip()
 
     # Parse the JSON objects from the control evaluation
