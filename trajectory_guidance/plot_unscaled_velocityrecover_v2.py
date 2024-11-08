@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import glob
 # Load the velocity data from the uploaded .npy file
-npy_filename = '/Users/huangziheng/PycharmProjects/final_LLM_enhance/npysave/U_turn.npy'
+npy_filename = './npysave/S_shape.npy'
 
 try:
     # Load the velocity data from the .npy file

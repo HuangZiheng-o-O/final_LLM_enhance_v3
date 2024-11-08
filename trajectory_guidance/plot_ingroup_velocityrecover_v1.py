@@ -4,7 +4,7 @@ import os
 import glob
 
 # Directory containing the .npy files
-directory = 'npysave'
+directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg'
 
 # Get a list of all .npy files in the directory
 npy_files = glob.glob(os.path.join(directory, '*.npy'))

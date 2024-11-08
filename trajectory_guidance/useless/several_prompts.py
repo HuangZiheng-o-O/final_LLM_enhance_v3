@@ -12,7 +12,7 @@ from scipy.optimize import fsolve
 
 
 # Load API key from a YAML configuration file
-with open("config.yaml") as f:
+with open("llm_utils/config.yaml") as f:
     config_yaml = yaml.load(f, Loader=yaml.FullLoader)
 
 # Set the API key and model name

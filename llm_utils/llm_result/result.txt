@@ -1,4 +1,4 @@
-/Users/huangziheng/opt/anaconda3/envs/deep_learning_env/bin/python /Users/huangziheng/PycharmProjects/final_LLM_enhance_v3/llm_utils/test.py
+/Users/huangziheng/opt/anaconda3/envs/deep_learning_env/bin/python /Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/llm_utils/test.py
 step1: The man's legs are positioned wide apart, providing a stable base as he begins the rowing motion, engaging his thighs and hips to initiate the movement.
 step2: The man's arms pull back in a rowing motion while his back engages, coordinating with his legs to provide propulsion, resulting in a dynamic full-body exercise.
 Action:

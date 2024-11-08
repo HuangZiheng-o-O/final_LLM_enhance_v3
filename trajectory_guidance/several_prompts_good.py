@@ -19,7 +19,7 @@ with open("config.yaml") as f:
     config_yaml = yaml.load(f, Loader=yaml.FullLoader)
 
 # Set the API key and model name
-MODEL = "gpt-4o-mini"
+MODEL = "gpt-4o"
 # MODEL = "gpt-4o"
 
 client = OpenAI(api_key=config_yaml['token'])
@@ -287,6 +287,7 @@ def inside(
         descriptions: List[str],
         follow_up_question_file: str = "./prompt/follow_up_question.txt",  # Path to the file with the follow-up question
         log_file: str = "./log/model_interaction_log.txt"  # Path to the log file
+
 ) -> str:
     # Function to log messages to the log file
     def log_to_file(message: str):
@@ -386,9 +387,13 @@ def inside(
         print("#######################\n")
     except Exception as e:
         log_to_file(f"Error interpolating velocity: {e}")
+        print(f"Error interpolating velocity: {e}")
          #{new_pattern_name}
         log_to_file(f"Error interpolating velocity: {new_pattern_name}")
+        print(f"Error interpolating velocity: {e}")
         return f"\nI encountered an error while interpolating velocity. Please try again with a different input."
+
+
 
 
     return root_linear_velocity
@@ -427,6 +432,9 @@ def main():
 
         log_results(result_file_path, descriptions, str(result))
         index += 1
+
+
+
 
 
 if __name__ == "__main__":

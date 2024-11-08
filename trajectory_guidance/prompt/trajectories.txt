@@ -1,1 +1,6 @@
-U-shaped:a man walk in the trjectory of a U-turn
+Walk forward, and turn (towards 10 o'clock) and continue walking, then turn (towards 10 o'clock) and continue walking.
+Walk forward, and turn right and continue walking, and turn right and continue walking.
+Zigzag: using a zigzag trajectory.
+135angleLeft: moving forward and then making a 135-degree turn to the left.
+90angleRight: moving forward and then making a 90-degree turn to the right.
+30angleRight: moving forward and then making a 30-degree turn to the right.
