@@ -35,6 +35,7 @@ def compute_root_motion(positions):
     # print("positions.shape", positions.shape)
 
 
+
     print(positions.shape)
     seq_len = positions.shape[0]
 

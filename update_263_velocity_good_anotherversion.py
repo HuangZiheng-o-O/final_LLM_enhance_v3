@@ -51,6 +51,7 @@ def compute_root_motion(positions):
 
     print("rot_vel (radians):\n", rot_vel)
 
+
     # Step 5: Compute cumulative rotation angles
     r_rot_ang = torch.zeros_like(rot_vel)
     r_rot_ang[1:] = rot_vel[:-1]

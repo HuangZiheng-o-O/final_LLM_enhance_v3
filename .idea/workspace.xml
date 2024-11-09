@@ -108,7 +108,7 @@
       <recent name="$PROJECT_DIR$/llm_utils/llm_result" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.update_velocity4">
+  <component name="RunManager" selected="Python.update_263_velocity_good">
     <configuration name="2Dcoor_interpolated_sampled_reconstructed_points_128" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="final_LLM_enhance_v4" />
       <option name="ENV_FILES" value="" />
@@ -132,7 +132,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="update_velocity4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="update_263_velocity_good" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="final_LLM_enhance_v4" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,7 +146,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_velocity4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_263_velocity_good.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="update_velocity5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="update_263_velocity_good_anotherversion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="final_LLM_enhance_v4" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,7 +169,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_velocity5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_263_velocity_good_anotherversion.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,7 +178,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="update_velocity_perfect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="update_velocity_notperfect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="final_LLM_enhance_v4" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,7 +192,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_velocity_perfect.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_velocity_notperfect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,9 +226,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.update_velocity4" />
-        <item itemvalue="Python.update_velocity5" />
-        <item itemvalue="Python.update_velocity_perfect" />
+        <item itemvalue="Python.update_263_velocity_good" />
+        <item itemvalue="Python.update_263_velocity_good_anotherversion" />
+        <item itemvalue="Python.update_velocity_notperfect" />
         <item itemvalue="Python.2Dcoor_interpolated_sampled_reconstructed_points_128" />
         <item itemvalue="Python.velocity_reconstruction_visualizer" />
       </list>
