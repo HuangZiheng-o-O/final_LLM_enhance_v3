@@ -4,7 +4,7 @@ import torch
 
 positions_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/interpolated_sampled_reconstructed_points_128_9.npy'
 data_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
-output_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/newheart119.npy'
+output_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/newheart11912.npy'
 
 # positions_data_type, raw_data_type
 # 结果
@@ -47,11 +47,12 @@ def compute_root_motion(positions):
 
     # Step 3: Unwrap angles to ensure continuity
     theta_unwrapped = torch.from_numpy(np.unwrap(theta.numpy()))
+    theta_unwrapped = theta_unwrapped.float()/10
 
     # Step 4: Compute rotation velocities
     rot_vel = torch.zeros(seq_len)
+    rot_vel[0] = theta_unwrapped[0]
     rot_vel[1:] = theta_unwrapped[1:] - theta_unwrapped[:-1]
-    rot_vel[0] = 0  # First frame has no rotation velocity
 
     # Step 5: Compute cumulative rotation angles
     r_rot_ang = torch.zeros_like(rot_vel)
@@ -113,10 +114,12 @@ def qrot(q, v):
 # Compute rot_vel and root_linear_velocity from positions
 rot_vel, root_linear_velocity = compute_root_motion(positions)
 
+
 # Update rawdata with new root_rot_velocity and root_linear_velocity
 updated_rawdata = rawdata.clone()
-updated_rawdata[..., 0] = rot_vel  # Replace root_rot_velocity
-updated_rawdata[..., 1:3] = root_linear_velocity  # Replace root_linear_velocity
+updated_rawdata[..., 0] = rot_vel   # Replace root_rot_velocity
+updated_rawdata[..., 1:3] = root_linear_velocity/2  # Replace root_linear_velocity
+
 
 # Output the updated data to review the changes
 print(updated_rawdata[:5])
