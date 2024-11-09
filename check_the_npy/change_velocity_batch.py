@@ -113,7 +113,7 @@ if __name__ == "__main__":
     # 原始数据结构文件的路径（需要根据实际情况修改）
     raw_motion_path = "../S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy"
     # 输出目录
-    output_dir_choice1 = "../trajectory_guidance/motion_change_npy/1"
-    output_dir_choice2 = "../trajectory_guidance/motion_change_npy/2"
+    output_dir_choice1 = "../trajectory_guidance/motion_change_npy_failed/1"
+    output_dir_choice2 = "../trajectory_guidance/motion_change_npy_failed/2"
 
     process_all_motion_files(motion_dir, raw_motion_path, output_dir_choice1, output_dir_choice2)

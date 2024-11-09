@@ -18,14 +18,14 @@ positions = torch.tensor(np.load(positions_path), dtype=torch.float32)
 
 print(positions.shape)
 # Define the compute_root_motion function
-def compute_root_motion(positions):
+def compute_root_motion(positions,standard_scale_mode=False,standard_velocity_abs_mean=0.015,scaling_factor_mode = False,scaling_factor=1.0):
     """
     positions: Tensor of shape (seq_len, 2), positions in x and z
     Returns:
     rot_vel: Tensor of shape (seq_len,), rotation info
     root_linear_velocity: Tensor of shape (seq_len, 2), data[..., :-1, 1:3]
     """
-    #
+
     # positions = positions[:, :, [0, 2]]
     # # from # (128, 1, 2) to # (128,2)
     # positions = positions.squeeze(1)
@@ -33,8 +33,6 @@ def compute_root_motion(positions):
     # positions = torch.tensor(positions, dtype=torch.float32)
     #
     # print("positions.shape", positions.shape)
-
-
 
     print(positions.shape)
     seq_len = positions.shape[0]
@@ -55,6 +53,17 @@ def compute_root_motion(positions):
     rot_vel[0] = theta_unwrapped[0]
     rot_vel[1:] = theta_unwrapped[1:] - theta_unwrapped[:-1]
 
+    standard_scaling_factor = (standard_velocity_abs_mean/rot_vel.abs().mean())
+
+    if standard_scale_mode:
+        rot_vel = rot_vel* standard_scaling_factor
+    elif scaling_factor_mode:
+        assert scaling_factor > 0, 'scaling_factor must be positive'
+        assert scaling_factor <= 1, 'scaling_factor must be less than or equal to 1'
+        rot_vel = rot_vel*scaling_factor
+    else:
+        rot_vel = rot_vel
+
     # Step 5: Compute cumulative rotation angles
     r_rot_ang = torch.zeros_like(rot_vel)
     r_rot_ang[1:] = rot_vel[:-1]
@@ -62,8 +71,8 @@ def compute_root_motion(positions):
 
     # Step 6: Compute rotation quaternions
     r_rot_quat = torch.zeros(seq_len, 4)
-    r_rot_quat[:, 0] = torch.cos(r_rot_ang)
-    r_rot_quat[:, 2] = torch.sin(r_rot_ang)
+    r_rot_quat[:, 0] = torch.cos(r_rot_ang/2)
+    r_rot_quat[:, 2] = torch.sin(r_rot_ang/2)
 
     # Step 7: Prepare positions in 3D
     positions_3d = torch.zeros(seq_len, 3)
