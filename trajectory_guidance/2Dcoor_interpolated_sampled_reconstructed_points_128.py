@@ -32,27 +32,6 @@ def uniform_sample_points(input_filepath, output_filepath, num_points=128):
 # uniform_output_path
 
 
-def uniform_sample_points(input_filepath, output_filepath, num_points=128):
-    """
-    Uniformly samples points by selecting every nth point.
-
-    Parameters:
-        input_filepath (str): Path to the input .npy file with original points.
-        output_filepath (str): Path to save the uniformly sampled points as .npy file.
-        num_points (int): Number of points to sample. Default is 128.
-    """
-    # Load original points
-    points = np.load(input_filepath)
-
-    # Uniform sampling by step size
-    step_size = max(1, len(points) // num_points)
-    sampled_points = points[::step_size][:num_points]
-
-    # Save sampled points
-    np.save(output_filepath, sampled_points)
-    print(f"Uniformly sampled points saved as {output_filepath}")
-
-
 def interpolate_sample_points(input_filepath, output_filepath, num_points=128):
     """
     Interpolates points to create a specified number of uniformly spaced points along the path.

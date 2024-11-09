@@ -2,7 +2,7 @@ import numpy as np
 import torch
 
 
-positions_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/interpolated_sampled_reconstructed_points_128_9.npy'
+positions_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled/Infinity_controlvelocity0.08_interpolated_128.npy'
 data_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
 output_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/newheart11912.npy'
 
@@ -54,6 +54,8 @@ def compute_root_motion(positions,standard_scale_mode=False,standard_velocity_ab
     rot_vel[1:] = theta_unwrapped[1:] - theta_unwrapped[:-1]
 
     standard_scaling_factor = (standard_velocity_abs_mean/rot_vel.abs().mean())
+    print(rot_vel.abs().mean())
+
 
     print("important_standard_scaling_factor", standard_scaling_factor)
 

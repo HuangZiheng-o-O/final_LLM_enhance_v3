@@ -11,4 +11,4 @@ velocity_magnitude = np.linalg.norm(root_linear_velocity_x_y, axis=1)
 
 velocity_magnitude_mean = np.mean(velocity_magnitude)
 
-print(velocity_magnitude_mean)
+print(velocity_magnitude_mean) #0.036666445
