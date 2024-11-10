@@ -100,7 +100,7 @@ def rotate_all_files_parallel(standard_file, target_dir, output_dir, num_workers
 
 if __name__ == "__main__":
     standard_file = "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy"
-    target_dir = "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance"
-    output_dir = "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_rotated3"
+    target_dir = "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_notan2"
+    output_dir = "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_notan2_rotated3"
 
     rotate_all_files_parallel(standard_file, target_dir, output_dir)

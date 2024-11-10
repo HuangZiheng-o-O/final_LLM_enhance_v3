@@ -120,20 +120,13 @@ def process_and_save_scaled_velocity(positions_path, data_path, output_directory
         # print(f"Saved updated data to {new_output_path_2}")
         #
 
-        root_linear_velocity_scales = [root_linear_velocity_scalestandard,1.0]  # 列出不同的 root_linear_velocity_scale 值
+        new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}{ext}"
+        updated_rawdata[:, 1] = 0
+        updated_rawdata[:, 2] = 0.03
 
-        for scale in root_linear_velocity_scales:
-            if scale == standard_scaling_factor:
-                new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}_root_linear_velocity_{scale:.3f}_using_standard_scale_root_linear{ext}"
-            elif scale  == 1.0:
-                new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}_root_linear_velocity_{scale:.3f}_not_scale_root_linear{ext}"
-            else:
-                new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}_root_linear_velocity_{scale:.3f}{ext}"
-            updated_rawdata[3:, 1:3] = root_linear_velocity[3:] * scale
-
-            new_output_path = os.path.join(output_directory, new_filename)
-            np.save(new_output_path, updated_rawdata.numpy())
-            print(f"Saved updated data to {new_output_path}")
+        new_output_path = os.path.join(output_directory, new_filename)
+        np.save(new_output_path, updated_rawdata.numpy())
+        print(f"Saved updated data to {new_output_path}")
 
 
 # # Run the function with your specified paths
@@ -152,7 +145,7 @@ def main():
     positions_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled/'
     aaaa = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
     data_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/'
-    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_corrected/'
+    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263final_correct2/'
 
     # Find all positions files
     positions_files = glob(os.path.join(positions_directory, '*.npy'))
