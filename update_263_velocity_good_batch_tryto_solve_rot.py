@@ -143,44 +143,67 @@ def process_and_save_scaled_velocity(positions_path, data_path, output_directory
 #
 # process_and_save_scaled_velocity(positions_path, data_path, output_directory)
 
-import os
+
+import concurrent.futures
 from glob import glob
 
 def main():
     # Define directories
     positions_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled/'
+    aaaa = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
     data_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/'
-    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_adjustforward/'
+    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_corrected/'
 
     # Find all positions files
     positions_files = glob(os.path.join(positions_directory, '*.npy'))
 
     # Assuming that data files have a corresponding name to positions files.
     # Modify the mapping logic below if your data files have a different naming convention.
+    tasks = []
     for pos_path in positions_files:
         filename = os.path.basename(pos_path)
 
-        # Example mapping: Replace 'interpolated' with 'raw_sample' or adjust as needed
-        # This part should be modified based on your file naming convention
+
+        # # Example mapping: Replace 'interpolated' with 'raw_sample' or adjust as needed
+        # # Modify this according to your actual naming convention
+        # # For instance, if positions file is 'Infinity_controlvelocity0.08_interpolated_128.npy'
+        # # and data file is 'raw_sample0_repeat0_len128.npy', you need a way to map them
+        # # Here, we'll assume they share the same base name before certain patterns
+        # # You may need to adjust this part based on your actual filenames
+        #
+        # # Example: Extracting a unique identifier from the positions filename
+        # # Adjust this parsing as per your filename structure
+        # base_name = filename.replace('_interpolated', '').replace('.npy', '')
+        # # Now, find the corresponding data file
+        # # This is a placeholder logic; adjust according to your actual file naming
+        #
+        # data_files = glob(os.path.join(data_directory, f"*{base_name}*.npy"))
+
         data_files = glob(os.path.join(data_directory, "*.npy"))
 
         if not data_files:
             print(f"No corresponding data file found for positions file: {pos_path}")
             continue
-
         data_path = data_files[0]  # Take the first match; adjust if multiple matches are possible
+        tasks.append((pos_path, data_path, output_directory))
 
-        # Process each file using a normal for loop
-        try:
-            process_and_save_scaled_velocity(pos_path, data_path, output_directory)
-            print(f"Processed: {pos_path} with {data_path}")
-        except Exception as exc:
-            print(f"Exception processing {pos_path} with {data_path}: {exc}")
+    # Define the number of workers; adjust as per your CPU cores
+    max_workers = min(32, os.cpu_count() + 4)  # Example: Adjust based on your system
 
-def process_and_save_scaled_velocity(positions_path, data_path, out_dir):
-    # Implement the specific processing logic here
-    # Example: Load and process the data, then save it to the output directory
-    pass
+    # Use ProcessPoolExecutor for CPU-bound tasks
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+        futures = []
+        for task in tasks:
+            positions_path, data_path, out_dir = task
+            futures.append(executor.submit(process_and_save_scaled_velocity, positions_path, data_path, out_dir))
+
+        # Optionally, you can monitor the progress
+        for future in concurrent.futures.as_completed(futures):
+            future.result()
+            # try:
+            #     future.result()
+            # except Exception as exc:
+            #     print(f"Generated an exception: {exc}")
 
 if __name__ == "__main__":
     main()
