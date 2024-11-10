@@ -97,7 +97,9 @@ def process_and_save_scaled_velocity(positions_path, data_path, output_directory
         root_linear_velocity = compute_root_linear_velocity(positions, scaled_rot_vel)
 
         updated_rawdata = rawdata.clone()
-        updated_rawdata[..., 0] = scaled_rot_vel
+        # updated_rawdata[..., 0] = scaled_rot_vel
+        updated_rawdata[3:, 0] = scaled_rot_vel[3:]
+
 
         root_linear_velocity_standard = 0.036666445
         velocity_magnitude = np.linalg.norm(root_linear_velocity, axis=-1, keepdims=True)
@@ -127,7 +129,7 @@ def process_and_save_scaled_velocity(positions_path, data_path, output_directory
                 new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}_root_linear_velocity_{scale:.3f}_not_scale_root_linear{ext}"
             else:
                 new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}_root_linear_velocity_{scale:.3f}{ext}"
-            updated_rawdata[..., 1:3] = root_linear_velocity * scale
+            updated_rawdata[3:, 1:3] = root_linear_velocity[3:] * scale
 
             new_output_path = os.path.join(output_directory, new_filename)
             np.save(new_output_path, updated_rawdata.numpy())
@@ -205,3 +207,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
