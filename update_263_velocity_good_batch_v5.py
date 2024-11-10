@@ -2,6 +2,7 @@ import os
 import numpy as np
 import torch
 
+from calculate_angleshift_using22_3 import compute_external_angles, compute_expected_facing_direction
 # Quaternion inversion function
 def qinv(q):
     assert q.shape[-1] == 4, 'q must be a tensor of shape (..., 4)'
@@ -44,7 +45,8 @@ def compute_rot_vel_and_scaling(positions, standard_velocity_abs_mean=0.015):
 
     return rot_vel, standard_scaling_factor
 
-# Function to compute root_linear_velocity using rot_vel and scaling_factor
+
+
 def compute_root_linear_velocity(positions, rot_vel):
     seq_len = positions.shape[0]
     r_rot_ang = torch.zeros_like(rot_vel)
@@ -149,10 +151,46 @@ from glob import glob
 
 def main():
     # Define directories
-    positions_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled_corrected/'
+
+    # 加载数据
+    positions_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/interpolated_sampled_reconstructed_points_128_9.npy'
+    data_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
+    output_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/hearteg/newheart11912.npy'
+
+    rawdata = torch.tensor(np.load(data_path), dtype=torch.float32)
+    positions = torch.tensor(np.load(positions_path), dtype=torch.float32)
+
+
+    original_223positions = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/video_npy/walk_and_wave_joint.npy'
+    original_positions = torch.tensor(np.load(original_223positions), dtype=torch.float32)
+
+    # 提取原始的 2D 坐标
+    extracted_2Dorigin = original_positions[:, 1:2, [0, 2]].squeeze(1)  # 提取形状 (128, 2)
+    # print("Extracted 2D origin:", extracted_2Dorigin)
+    print("Original_positions shape:", extracted_2Dorigin.shape)
+    print("Rawdata shape:", rawdata.shape)
+    print("Positions shape:", positions.shape)
+
+    # 获取前四帧的朝向
+    facing_direction = compute_expected_facing_direction(extracted_2Dorigin)
+    motion_direction = compute_expected_facing_direction(positions)
+
+    # 计算并输出平均外角
+    avg_external_angle_radians, avg_external_angle_degrees = compute_external_angles(facing_direction, motion_direction)
+    print("Average external angle in radians:", avg_external_angle_radians)
+    print("Average external angle in degrees:", avg_external_angle_degrees)
+
+    #################################################
+
+
+
+    positions_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled/'
     aaaa = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
     data_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/'
-    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_corrected/'
+    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_adjustforward/'
+
+    original_223positions = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/video_npy/walk_and_wave_joint.npy'
+    original_positions = torch.tensor(np.load(original_223positions), dtype=torch.float32)
 
     # Find all positions files
     positions_files = glob(os.path.join(positions_directory, '*.npy'))

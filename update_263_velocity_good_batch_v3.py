@@ -45,11 +45,12 @@ def compute_rot_vel_and_scaling(positions, standard_velocity_abs_mean=0.015):
     return rot_vel, standard_scaling_factor
 
 # Function to compute root_linear_velocity using rot_vel and scaling_factor
-def compute_root_linear_velocity(positions, rot_vel):
+def compute_root_linear_velocity(positions, rot_vel,minus_flag=False,angle_shift = 0):
     seq_len = positions.shape[0]
     r_rot_ang = torch.zeros_like(rot_vel)
     r_rot_ang[1:] = rot_vel[:-1]
     r_rot_ang = torch.cumsum(r_rot_ang, dim=0)
+
 
     r_rot_quat = torch.zeros(seq_len, 4)
     r_rot_quat[:, 0] = torch.cos(r_rot_ang/2)
@@ -149,10 +150,10 @@ from glob import glob
 
 def main():
     # Define directories
-    positions_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled_corrected/'
+    positions_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled/'
     aaaa = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
     data_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/'
-    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_corrected/'
+    output_directory = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/263output_afterguidance_adjustforward/'
 
     # Find all positions files
     positions_files = glob(os.path.join(positions_directory, '*.npy'))

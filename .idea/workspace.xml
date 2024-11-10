@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="batchtest2">
-      <change afterPath="$PROJECT_DIR$/checkV/1111.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkV/Triangle_controlvelocity0.08_interpolated_128_rot_scale_0.327_root_linear_velocity_0.183.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkV/V_controlvelocity0.08_interpolated_128_rot_scale_0.497_root_linear_velocity_0.207.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkV/extract263.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkshape_of263/111.py" afterDir="false" />
+    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="updated_rawdata[3:, 1:3]">
+      <change afterPath="$PROJECT_DIR$/tool_update_263_velocity_good_batch_v3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update_263_velocity_good_batch_v3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update_263_velocity_good_brandnew.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkshape_of263/extract263.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkshape_of263/extract263.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/update_263_velocity_good_batch_v2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +93,7 @@
     "Python.visualize.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/checkV",
+    "last_opened_file_path": "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,8 +106,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/checkV" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/checkV" />
       <recent name="$PROJECT_DIR$/trajectory_guidance" />
       <recent name="$PROJECT_DIR$/trajectory_guidance/hearteg" />
       <recent name="$PROJECT_DIR$/checkshape_of263" />
@@ -122,7 +119,7 @@
       <recent name="$PROJECT_DIR$/llm_utils/llm_result" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.111">
+  <component name="RunManager" selected="Python.update_263_velocity_good_batch_v2">
     <configuration name="111" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="final_LLM_enhance_v4" />
       <option name="ENV_FILES" value="" />
@@ -240,9 +237,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.update_263_velocity_good_batch_v2" />
         <item itemvalue="Python.111" />
         <item itemvalue="Python.extract263" />
-        <item itemvalue="Python.update_263_velocity_good_batch_v2" />
         <item itemvalue="Python.useless1" />
         <item itemvalue="Python.2Dcoor_interpolated_sampled_reconstructed_points_128_v2" />
       </list>
@@ -285,7 +282,7 @@
       <workItem from="1730812166239" duration="13770000" />
       <workItem from="1730876581796" duration="14837000" />
       <workItem from="1730898745318" duration="39685000" />
-      <workItem from="1731083856181" duration="33464000" />
+      <workItem from="1731083856181" duration="36588000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -439,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731170427749</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="updated_rawdata[3:, 1:3]">
+      <option name="closed" value="true" />
+      <created>1731224049354</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731224049354</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +475,8 @@
     <MESSAGE value="update_263_velocity_good.py" />
     <MESSAGE value="batchtest1" />
     <MESSAGE value="batchtest2" />
-    <option name="LAST_COMMIT_MESSAGE" value="batchtest2" />
+    <MESSAGE value="updated_rawdata[3:, 1:3]" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated_rawdata[3:, 1:3]" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$velocity_reconstruction_visualizer.coverage" NAME="velocity_reconstruction_visualizer Coverage Results" MODIFIED="1731161126027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
@@ -501,7 +507,7 @@
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$plot_scaled.coverage" NAME="plot_scaled Coverage Results" MODIFIED="1730812529004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$several_prompts_good.coverage" NAME="several_prompts_good Coverage Results" MODIFIED="1730882876401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$change_velocity_batch.coverage" NAME="change_velocity_batch Coverage Results" MODIFIED="1730889887246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/check_the_npy" />
-    <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_263_velocity_good_batch_v2.coverage" NAME="update_263_velocity_good_batch_v2 Coverage Results" MODIFIED="1731166301191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_263_velocity_good_batch_v2.coverage" NAME="update_263_velocity_good_batch_v2 Coverage Results" MODIFIED="1731224280377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_velocity.coverage" NAME="update_velocity Coverage Results" MODIFIED="1731056099832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
