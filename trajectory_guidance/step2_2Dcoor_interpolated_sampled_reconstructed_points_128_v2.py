@@ -5,6 +5,12 @@ import concurrent.futures
 import glob
 import os
 
+"""
+该代码提供了一系列功能，用于处理、可视化和重建坐标。
+主要功能包括：根据目标均值调整速度数据、重建坐标并保存；
+将重建后的点可视化并生成图像；支持对多个文件的批量处理和并行计算；
+提供均匀采样和插值采样功能，以及将结果保存为 .npy 文件并生成比较图像。
+"""
 
 def process_and_save_velocity_data(input_filepath, output_filepath, target_mean=0.08):
     """
@@ -107,7 +113,7 @@ def process_and_visualize(file_path, output_npy_folder, output_image_folder, tar
         print(f"An error occurred in processing {file_path}: {e}")
 
 
-def process_and_visualize_all(input_folder, output_npy_folder, output_image_folder, target_mean=0.08, max_workers=None):
+def process_and_visualize_all_parallel_processing(input_folder, output_npy_folder, output_image_folder, target_mean=0.08, max_workers=None):
     """
     Processes and visualizes all .npy files in the specified input folder in parallel.
 
@@ -159,6 +165,9 @@ def process_and_visualize_all(input_folder, output_npy_folder, output_image_fold
         print(f"An error occurred in process_and_visualize_all: {e}")
 
 
+############################################################################################################
+
+# we don't use it
 def uniform_sample_points(input_filepath, output_filepath, num_points=128):
     """
     Uniformly samples points by selecting points at evenly spaced intervals to cover the entire trajectory.
@@ -310,8 +319,8 @@ def process_sampling_and_visualize(file_path, output_npy_folder, output_image_fo
         print(f"An error occurred in sampling and visualization for {file_path}: {e}")
 
 
-def process_sampling_and_visualize_all(input_folder, output_sampled_folder, output_sampling_image_folder,
-                                       sampling_method='interpolated', num_points=128, max_workers=None):
+def process_sampling_and_visualize_all_parallel_processing(input_folder, output_sampled_folder, output_sampling_image_folder,
+                                                           sampling_method='interpolated', num_points=128, max_workers=None):
     """
     Processes sampling (uniform or interpolated) and visualizes all .npy files in the specified input folder in parallel.
 
@@ -365,42 +374,56 @@ def process_sampling_and_visualize_all(input_folder, output_sampled_folder, outp
         print(f"An error occurred in process_sampling_and_visualize_all: {e}")
 
 
-if __name__ == "__main__":
+
+def step2_process_velocity_data_main_func(input_folder, output_npy_folder_velocity, output_image_folder_velocity,
+                                          output_sampled_folder_uniform, output_sampling_image_folder_uniform,
+                                          output_sampled_folder_interpolated, output_sampling_image_folder_interpolated,
+                                          target_mean=0.08, num_points=128):
+    os.makedirs(output_npy_folder_velocity, exist_ok=True)
+    os.makedirs(output_image_folder_velocity, exist_ok=True)
+    os.makedirs(output_sampled_folder_uniform, exist_ok=True)
+    os.makedirs(output_sampling_image_folder_uniform, exist_ok=True)
+    os.makedirs(output_sampled_folder_interpolated, exist_ok=True)
+    os.makedirs(output_sampling_image_folder_interpolated, exist_ok=True)
+
     # 第一部分：处理和可视化速度数据
-    output_npy_folder_velocity = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave_controlvelocity0dot8'
-    output_image_folder_velocity = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave_controlvelocity0dot8_images'
-
-    input_folder_velocity = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave'
-
-    # 开始批量处理和可视化速度数据
-    process_and_visualize_all(
-        input_folder=input_folder_velocity,
+    process_and_visualize_all_parallel_processing(
+        input_folder=input_folder,
         output_npy_folder=output_npy_folder_velocity,
         output_image_folder=output_image_folder_velocity,
-        target_mean=0.08
+        target_mean=target_mean
     )
 
-    # 第二部分：统一采样和插值采样
-    output_sampled_folder_uniform = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/uniform_sampled'
-    output_sampling_image_folder_uniform = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/uniform_sampled_images'
-
-    output_sampled_folder_interpolated = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled'
-    output_sampling_image_folder_interpolated = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/interpolated_sampled_images'
-
-    # 统一采样
-    process_sampling_and_visualize_all(
-        input_folder=output_npy_folder_velocity,
-        output_sampled_folder=output_sampled_folder_uniform,
-        output_sampling_image_folder=output_sampling_image_folder_uniform,
-        sampling_method='uniform',
-        num_points=128
-    )
+    # # 第二部分：统一采样和插值采样
+    # # 统一采样
+    # process_sampling_and_visualize_all(
+    #     input_folder=output_npy_folder_velocity,
+    #     output_sampled_folder=output_sampled_folder_uniform,
+    #     output_sampling_image_folder=output_sampling_image_folder_uniform,
+    #     sampling_method='uniform',
+    #     num_points=num_points
+    # )
 
     # 插值采样
-    process_sampling_and_visualize_all(
+    process_sampling_and_visualize_all_parallel_processing(
         input_folder=output_npy_folder_velocity,
         output_sampled_folder=output_sampled_folder_interpolated,
         output_sampling_image_folder=output_sampling_image_folder_interpolated,
         sampling_method='interpolated',
-        num_points=128
+        num_points=num_points
     )
+
+if __name__ == "__main__":
+    # 调用示例
+    step2_process_velocity_data_main_func("./npysave",
+                                          input_folder_velocity='./ouput/npysave',
+                                          output_npy_folder_velocity='./ouput/npysave_controlvelocity0dot8',
+                                          output_image_folder_velocity='./ouput/npysave_controlvelocity0dot8_images',
+                                          output_sampled_folder_uniform='./ouput/uniform_sampled',
+                                          output_sampling_image_folder_uniform='./ouput/uniform_sampled_images',
+                                          output_sampled_folder_interpolated='./ouput/interpolated_sampled',
+                                          output_sampling_image_folder_interpolated='./ouput/interpolated_sampled_images',
+                                          target_mean=0.08,
+                                          num_points=128
+                                          )
+

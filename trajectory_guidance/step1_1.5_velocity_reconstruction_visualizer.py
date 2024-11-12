@@ -4,7 +4,15 @@ import concurrent.futures
 import glob
 import os
 
+"""
 
+该代码提供了批量处理和可视化速度数据的功能。
+它首先加载和调整速度数据的均值，然后根据调整后的速度重建坐标，并保存为 .npy 文件。
+接着，生成相应的可视化图像并保存为 .png 文件。
+代码支持对多个文件的并行处理，提高处理效率，适用于大规模数据集。
+target_mean=0.08
+
+"""
 def process_and_save_velocity_data(input_filepath, output_filepath, target_mean=0.08):
     """
     Processes velocity data to control mean values, reconstructs coordinates starting from (0,0),
@@ -132,6 +140,8 @@ def process_and_visualize_all(input_folder, output_npy_folder, output_image_fold
         if not os.path.exists(output_image_folder):
             os.makedirs(output_image_folder)
 
+
+
         # Find all .npy files in the input folder
         files = glob.glob(os.path.join(input_folder, "*.npy"))
         if not files:
@@ -165,15 +175,11 @@ def process_and_visualize_all(input_folder, output_npy_folder, output_image_fold
 
 
 if __name__ == "__main__":
-    # 定义输入和输出文件夹路径
-    input_folder = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave'
-    output_npy_folder = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave_controlvelocity0dot8'
-    output_image_folder = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave_controlvelocity0dot8_images'
 
     # 开始批量处理和可视化
     process_and_visualize_all(
-        input_folder=input_folder,
-        output_npy_folder=output_npy_folder,
-        output_image_folder=output_image_folder,
+        input_folder = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave',
+        output_npy_folder = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave_controlvelocity0dot8',
+        output_image_folder = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/trajectory_guidance/npysave_controlvelocity0dot8_images',
         target_mean=0.08
     )

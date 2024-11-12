@@ -4,13 +4,86 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="solve_faceforward_questions_cleancode">
-      <change afterPath="$PROJECT_DIR$/263check_modified/change.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/update_263_velocity_good_batch_tryto_solve_rot2.py" afterDir="false" />
+    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="finish all the traj part!">
+      <change afterPath="$PROJECT_DIR$/trajectory_guidance/step1_copy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trajectory_guidance/step3_update_263_velocity_v4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/final_LLM_enhance_v4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trajectory_guidance_pipeline.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/263check_modified/V_controlvelocity0.08_interpolated_128_rot_scale_0.497_root_linear_velocity_0.207.npy" beforeDir="false" afterPath="$PROJECT_DIR$/263check_modified/V_controlvelocity0.08_interpolated_128_rot_scale_0.497_root_linear_velocity_0.207.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotate_263.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotate_263.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_tryto_solve_rot.py" beforeDir="false" afterPath="$PROJECT_DIR$/update_263_velocity_good_batch_v3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/animations/walk_and_wave.bvh" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/animations/walk_and_wave.bvh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/animations/walk_and_wave_ik.bvh" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/animations/walk_and_wave_ik.bvh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/sample0_repeat0_len128.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/sample0_repeat0_len128.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/sample0_repeat0_len128_ik.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/sample0_repeat0_len128_ik.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video.zip" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video/walk_and_wave_ik_joint.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video/walk_and_wave_ik_joint.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video/walk_and_wave_joint.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video/walk_and_wave_joint.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video_npy/walk_and_wave_ik_joint.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video_npy/walk_and_wave_ik_joint.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video_npy/walk_and_wave_joint.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video_npy/walk_and_wave_joint.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotate_263.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/2Dcoor_interpolated_sampled_reconstructed_points_128.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/2Dcoor_interpolated_sampled_reconstructed_points_128_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step2_2Dcoor_interpolated_sampled_reconstructed_points_128_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/012314_npy_Data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/checkdata263.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/new_joint_vecs/012314.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/new_joints/012314.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/scale_tool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/scale_tool_group.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/visualize.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/README.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/hearteg/Heart.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/hearteg/interpolated_sampled_reconstructed_points_128.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/inverse_N.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/semicircle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/spiral.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/triangle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot_ingroup_velocityrecover_v1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot_scaled.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot_unscaled_velocityrecover_v2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/result/newResult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/result/newResult.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py Documentation and Functionality Overview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py 文档与功能介绍.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts原来的sample点的.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step1_original_sample_notusethis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/some possible errors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/swap_xz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/111.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/draw_patterns.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/execute_code_and_compute_keyframes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/great_recover_speed_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/great_recover_speed_test2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/imagesGPT/20240828231607_keyframes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/imagesGPT/20240829003813_keyframes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/imagesGPT/20240830143413_keyframes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/interpolate_and_resample_velocity_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/keyframes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/keyframes8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/pattern.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/shape_curve.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/ChainPromptResult2 copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/ChainPromptResult2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/ChainPrompt_onlycurve_en.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/Result.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/follow_up_question2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/follow_up_question3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/model_interaction_log_old.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/several_prompts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/several_prompts2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/trajectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/trajectories2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/trajectories3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/velocity_reconstruction_visualizer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/velocity_reconstruction_visualizer_v2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/velocity_reconstruction_visualizer_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step1_1.5_velocity_reconstruction_visualizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_263_velocity_good.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_tryto_solve_rot2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_v2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_v3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/useless_update_velocity/calculate_angleshift.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/useless_update_velocity/calculate_angleshift_using22_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/useless_update_velocity/shift_position_rotation.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +110,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -102,8 +180,8 @@
     "Python.velocity_reconstruction_visualizer_v3.executor": "Run",
     "Python.visualize.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/263check_modified",
+    "git-widget-placeholder": "whole__pipeline",
+    "last_opened_file_path": "/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,23 +194,23 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/263check_modified" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/checkV" />
       <recent name="$PROJECT_DIR$/trajectory_guidance" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/263check_modified" />
+      <recent name="$PROJECT_DIR$/checkV" />
       <recent name="$PROJECT_DIR$/trajectory_guidance/hearteg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/useless_update_velocity" />
       <recent name="$PROJECT_DIR$/trajectory_guidance" />
+      <recent name="$PROJECT_DIR$/trajectory_guidance/useless" />
+      <recent name="$PROJECT_DIR$/useless_update_velocity" />
       <recent name="$PROJECT_DIR$/trajectory_guidance/hearteg" />
       <recent name="$PROJECT_DIR$/llm_utils" />
-      <recent name="$PROJECT_DIR$/llm_utils/llm_result" />
     </key>
   </component>
   <component name="RunManager" selected="Python.update_263_velocity_good_batch_v3">
     <configuration name="change" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="final_LLM_enhance_v4" />
+      <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,7 +233,7 @@
       <method v="2" />
     </configuration>
     <configuration name="extract263" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="final_LLM_enhance_v4" />
+      <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,8 +255,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="replace_first_three_frames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="final_LLM_enhance_v4" />
+    <configuration name="step4_replace_first_three_frames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -191,30 +269,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/replace_first_three_frames.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="rotate_263" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="final_LLM_enhance_v4" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rotate_263.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/step4_replace_first_three_frames.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -224,7 +279,7 @@
       <method v="2" />
     </configuration>
     <configuration name="update_263_velocity_good_batch_v3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="final_LLM_enhance_v4" />
+      <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -237,7 +292,30 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_263_velocity_good_batch_v3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/useless/update_263_velocity_good_batch_v3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="useless_rotate_263" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="trajectory_guidance_pipeline" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/useless/useless_rotate_263.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,8 +329,8 @@
         <item itemvalue="Python.update_263_velocity_good_batch_v3" />
         <item itemvalue="Python.extract263" />
         <item itemvalue="Python.change" />
-        <item itemvalue="Python.replace_first_three_frames" />
-        <item itemvalue="Python.rotate_263" />
+        <item itemvalue="Python.step4_replace_first_three_frames" />
+        <item itemvalue="Python.useless_rotate_263" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +371,8 @@
       <workItem from="1730812166239" duration="13770000" />
       <workItem from="1730876581796" duration="14837000" />
       <workItem from="1730898745318" duration="39685000" />
-      <workItem from="1731083856181" duration="56441000" />
+      <workItem from="1731083856181" duration="62264000" />
+      <workItem from="1731343940818" duration="12058000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -471,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731245007189</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="finish all the traj part!">
+      <option name="closed" value="true" />
+      <created>1731253252312</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1731253252312</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +592,8 @@
     <MESSAGE value="updated_rawdata[3:, 1:3]" />
     <MESSAGE value="solve_faceforward_questions" />
     <MESSAGE value="solve_faceforward_questions_cleancode" />
-    <option name="LAST_COMMIT_MESSAGE" value="solve_faceforward_questions_cleancode" />
+    <MESSAGE value="finish all the traj part!" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish all the traj part!" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$velocity_reconstruction_visualizer.coverage" NAME="velocity_reconstruction_visualizer Coverage Results" MODIFIED="1731161126027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />

@@ -51,18 +51,6 @@ def format_keyframes(keyframes: list, pattern_name="origin_30points",keyframes_s
 
     return formatted_string
 
-# def replace_placeholders_one(follow_up_question: str, keyframes: list) -> str:
-#     # Round the coordinates to two decimal places
-#     keyframes_rounded = [(frame, (round(x, 2), round(y, 2))) for frame, (x, y) in keyframes]
-#
-#     # Convert the list of keyframes to a string representation
-#     keyframes_str = ', '.join([f"Frame {frame}: ({x}, {y})" for frame, (x, y) in keyframes_rounded])
-#
-#     # Replace the placeholder with the keyframes string
-#     follow_up_question = follow_up_question.replace("PALCEHOLDER1", keyframes_str)
-#     return follow_up_question
-#
-
 
 # pattern_name is "PALCEHOLDER2"
 def replace_pattern_name(follow_up_question: str, pattern_name: str) -> str:
@@ -285,6 +273,7 @@ def interpolate_and_resample_velocity2(original_points, num_output_points=200):
 def inside(
         instruct_content: str,
         descriptions: List[str],
+        npysave_path : str =  "./npysave",
         follow_up_question_file: str = "./prompt/follow_up_question.txt",  # Path to the file with the follow-up question
         log_file: str = "./log/model_interaction_log.txt"  # Path to the log file
 
@@ -381,7 +370,12 @@ def inside(
         root_linear_velocity = tangent_vectors_array.reshape(1, len(tangent_vectors), 2)
         print(root_linear_velocity.shape)  # Should print: (1, seq_len, 2)
         # np.save(f"{new_pattern_name}.npy", root_linear_velocity) save to the directory "/npysave"
-        np.save(f"./npysave/{new_pattern_name}.npy", root_linear_velocity)
+
+        if not os.path.exists(npysave_path):
+            os.makedirs(npysave_path)
+        np.save(f"{npysave_path}/{new_pattern_name}.npy", root_linear_velocity)
+
+        # np.save(f"./npysave/{new_pattern_name}.npy", root_linear_velocity)
         print("#######################\n")
         print("root_linear_velocity: ", str(root_linear_velocity))
         print("#######################\n")
@@ -406,12 +400,13 @@ def log_results(result_file_path: str, descriptions: List[str], result: str):
         file.write("\n")
 
 
-def main():
-
-    instruct_file_path = './prompt/ChainPrompt.txt'
-    trajectories_file_path = './prompt/trajectories.txt'
-    result_file_path = './result/newResult.txt'
-
+def step1_generate_velocity(trajectories_file_path ='./prompt/trajectories.txt',
+                            instruct_file_path = './prompt/ChainPrompt.txt',
+                            result_file_path = './result/newResult.txt',
+                            npysave_path="./result/npysave",
+                            follow_up_question_file="./prompt/follow_up_question.txt",  # Path to the file with the follow-up question
+                            log_file="./log/model_interaction_log.txt"  # Path to the log file
+                            ):
 
     with open(instruct_file_path, 'r', encoding='utf-8') as file:
         original_instruct_content = file.read()
@@ -428,15 +423,25 @@ def main():
         if len(descriptions) < 1 or not any(descriptions):
             break
         instruct_content = replace_placeholders(original_instruct_content, descriptions)
-        result = inside(instruct_content=instruct_content,descriptions=descriptions)
+
+
+        result = inside(instruct_content=instruct_content, descriptions=descriptions,
+                        npysave_path = npysave_path,
+        follow_up_question_file= follow_up_question_file,
+        log_file = log_file
+        )
 
         log_results(result_file_path, descriptions, str(result))
         index += 1
 
 
-
-
-
 if __name__ == "__main__":
     os.environ['WORLD_SIZE'] = '1'
-    main()
+    step1_generate_velocity(trajectories_file_path='./prompt/trajectories.txt',
+                            instruct_file_path='./prompt/ChainPrompt.txt',
+                            result_file_path='./result/newResult.txt',
+                            npysave_path="./result/npysave",
+                            follow_up_question_file="./prompt/follow_up_question.txt",
+                            # Path to the file with the follow-up question
+                            log_file="./log/model_interaction_log.txt"  # Path to the log file
+                            )
