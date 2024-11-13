@@ -12,29 +12,30 @@ def main():
     # 设定路径，只需在此处统一调整
     trajectories_file_path = './prompt/trajectories.txt'
     instruct_file_path = './prompt/ChainPrompt.txt'
-    result_file_path = './result/newResult.txt'
-    npysave_path = "./result/npysave"
+    result_file_path = './output/newResult.txt'
+    npysave_path = "./output/npysave"
     follow_up_question_file = "./prompt/follow_up_question.txt"
     log_file = "./log/model_interaction_log.txt"
 
-    # npysave_path = './ouput/npysave'
-    output_npy_folder_velocity = './ouput/npysave_controlvelocity0dot08'
-    output_image_folder_velocity = './ouput/npysave_controlvelocity0dot08_images'
-    output_sampled_folder_uniform = './ouput/uniform_sampled'
-    output_sampling_image_folder_uniform = './ouput/uniform_sampled_images'
-    positions_interpolated = './ouput/interpolated_sampled'
-    output_sampling_image_folder_interpolated = './ouput/interpolated_sampled_images'
+    # npysave_path = './output/npysave' /Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/0.npy
+
+    output_npy_folder_velocity = './output/npysave_controlvelocity0dot08'
+    output_image_folder_velocity = './output/npysave_controlvelocity0dot08_images'
+    output_sampled_folder_uniform = './output/uniform_sampled'
+    output_sampling_image_folder_uniform = './output/uniform_sampled_images'
+    positions_interpolated = './output/interpolated_sampled'
+    output_sampling_image_folder_interpolated = './output/interpolated_sampled_images'
     target_mean = 0.08
-    num_points = 128
+    num_points = 140
 
 
-    # positions_interpolated = './ouput/interpolated_sampled/'
-    raw_data_directory = './S-shape of walk_and_wave/raw/'
-    final_correct_263before3rep = './ouput/263final_correct/'
+    # positions_interpolated = './output/interpolated_sampled/'
+    raw_data_directory = '/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/'
+    final_correct_263before3rep = './output/263final_correct/'
 
-    # output_dir_replace = "./ouput/263final_correct"
-    raw_path = "./S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy"
-    new_output_dir_replace = "./ouput/263final_correct_replace3frames"
+    # output_dir_replace = "./output/263final_correct"
+    raw_path = "/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/0.npy"
+    new_output_dir_replace = "./output/263final_correct_replace3frames"
 
 
     for path in [
@@ -46,20 +47,20 @@ def main():
         ensure_directory_exists(path)
 
 
-    # Step 1: 生成速度数据
-    os.environ['WORLD_SIZE'] = '1'
-    step1_generate_velocity(
-        trajectories_file_path=trajectories_file_path,
-        instruct_file_path=instruct_file_path,
-        result_file_path=result_file_path,
-        npysave_path=npysave_path,
-        follow_up_question_file=follow_up_question_file,
-        log_file=log_file
-    )
+    # # Step 1: 生成速度数据
+    # os.environ['WORLD_SIZE'] = '1'
+    # step1_generate_velocity(
+    #     trajectories_file_path=trajectories_file_path,
+    #     instruct_file_path=instruct_file_path,
+    #     result_file_path=result_file_path,
+    #     npysave_path=npysave_path,
+    #     follow_up_question_file=follow_up_question_file,
+    #     log_file=log_file
+    # )
 
     # Step 2: 处理速度数据
     step2_process_velocity_data_main_func(
-        input_folder_velocity=npysave_path,
+        input_folder=npysave_path,
         output_npy_folder_velocity=output_npy_folder_velocity,
         output_image_folder_velocity=output_image_folder_velocity,
         output_sampled_folder_uniform=output_sampled_folder_uniform,

@@ -1,6 +1,1 @@
-Walk forward, and turn (towards 10 o'clock) and continue walking, then turn (towards 10 o'clock) and continue walking.
-Walk forward, and turn right and continue walking, and turn right and continue walking.
-Zigzag: using a zigzag trajectory.
-135angleLeft: moving forward and then making a 135-degree turn to the left.
-90angleRight: moving forward and then making a 90-degree turn to the right.
-30angleRight: moving forward and then making a 30-degree turn to the right.
+semi_cirlcle_avoid_walk ：a man is walking/runing, he tried to avoid one sphere using semi_cirlcle trajectory in the middle. It means that he walks straight 10 m first, then turn using a  semi_cirlcle trajectory(10 m ), than walk straight (10 m )again.

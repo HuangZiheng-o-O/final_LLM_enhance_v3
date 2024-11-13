@@ -413,17 +413,16 @@ def step2_process_velocity_data_main_func(input_folder, output_npy_folder_veloci
         num_points=num_points
     )
 
-if __name__ == "__main__":
-    # 调用示例
-    step2_process_velocity_data_main_func("./npysave",
-                                          input_folder_velocity='./ouput/npysave',
-                                          output_npy_folder_velocity='./ouput/npysave_controlvelocity0dot8',
-                                          output_image_folder_velocity='./ouput/npysave_controlvelocity0dot8_images',
-                                          output_sampled_folder_uniform='./ouput/uniform_sampled',
-                                          output_sampling_image_folder_uniform='./ouput/uniform_sampled_images',
-                                          output_sampled_folder_interpolated='./ouput/interpolated_sampled',
-                                          output_sampling_image_folder_interpolated='./ouput/interpolated_sampled_images',
-                                          target_mean=0.08,
-                                          num_points=128
-                                          )
+# if __name__ == "__main__":
+#     # 调用示例
+#     step2_process_velocity_data_main_func(input_folder_velocity='./ouput/npysave',
+#                                           output_npy_folder_velocity='./ouput/npysave_controlvelocity0dot8',
+#                                           output_image_folder_velocity='./ouput/npysave_controlvelocity0dot8_images',
+#                                           output_sampled_folder_uniform='./ouput/uniform_sampled',
+#                                           output_sampling_image_folder_uniform='./ouput/uniform_sampled_images',
+#                                           output_sampled_folder_interpolated='./ouput/interpolated_sampled',
+#                                           output_sampling_image_folder_interpolated='./ouput/interpolated_sampled_images',
+#                                           target_mean=0.08,
+#                                           num_points=128
+#                                           )
 

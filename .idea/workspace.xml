@@ -4,86 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="finish all the traj part!">
-      <change afterPath="$PROJECT_DIR$/trajectory_guidance/step1_copy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trajectory_guidance/step3_update_263_velocity_v4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/final_LLM_enhance_v4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trajectory_guidance_pipeline.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="029dd5cd-0f87-4296-b532-49aa6705d9b7" name="Changes" comment="clean the project- not tested">
+      <change afterPath="$PROJECT_DIR$/trajectory_guidance/backup_step3_update_263_velocity_v4_backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trajectory_guidance/original263data/0.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trajectory_guidance/ouput/newResult.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/animations/walk_and_wave.bvh" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/animations/walk_and_wave.bvh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/animations/walk_and_wave_ik.bvh" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/animations/walk_and_wave_ik.bvh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/sample0_repeat0_len128.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/sample0_repeat0_len128.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/sample0_repeat0_len128_ik.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/sample0_repeat0_len128_ik.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video.zip" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video/walk_and_wave_ik_joint.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video/walk_and_wave_ik_joint.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video/walk_and_wave_joint.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video/walk_and_wave_joint.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video_npy/walk_and_wave_ik_joint.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video_npy/walk_and_wave_ik_joint.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S-shape of walk_and_wave/video_npy/walk_and_wave_joint.npy" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/S-shape of walk_and_wave/video_npy/walk_and_wave_joint.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotate_263.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/2Dcoor_interpolated_sampled_reconstructed_points_128.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/2Dcoor_interpolated_sampled_reconstructed_points_128_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step2_2Dcoor_interpolated_sampled_reconstructed_points_128_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/012314_npy_Data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/checkdata263.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/new_joint_vecs/012314.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/new_joints/012314.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/scale_tool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/scale_tool_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/Humanml/visualize.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/README.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/hearteg/Heart.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/hearteg/interpolated_sampled_reconstructed_points_128.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/inverse_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/semicircle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/spiral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/image/triangle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot_ingroup_velocityrecover_v1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot_scaled.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/plot_unscaled_velocityrecover_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/result/newResult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/result/newResult.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py Documentation and Functionality Overview.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts_good.py 文档与功能介绍.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/several_prompts原来的sample点的.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step1_original_sample_notusethis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/some possible errors" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/swap_xz.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/111.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/draw_patterns.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/execute_code_and_compute_keyframes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/great_recover_speed_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/great_recover_speed_test2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/imagesGPT/20240828231607_keyframes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/imagesGPT/20240829003813_keyframes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/imagesGPT/20240830143413_keyframes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/interpolate_and_resample_velocity_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/keyframes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/keyframes8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/pattern.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/test/shape_curve.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/ChainPromptResult2 copy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/ChainPromptResult2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/ChainPrompt_onlycurve_en.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/Result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/follow_up_question2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/follow_up_question3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/model_interaction_log_old.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/several_prompts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/several_prompts2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/trajectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/trajectories2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/useless/trajectories3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/velocity_reconstruction_visualizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/velocity_reconstruction_visualizer_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trajectory_guidance/velocity_reconstruction_visualizer_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step1_1.5_velocity_reconstruction_visualizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_263_velocity_good.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_tryto_solve_rot2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_263_velocity_good_batch_v3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/useless_update_velocity/calculate_angleshift.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/useless_update_velocity/calculate_angleshift_using22_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/useless_update_velocity/shift_position_rotation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/log/model_interaction_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/log/model_interaction_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/prompt/trajectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/prompt/trajectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/result/newResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/step2_2Dcoor_interpolated_sampled_reconstructed_points_128_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step2_2Dcoor_interpolated_sampled_reconstructed_points_128_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_guidance/step3_update_263_velocity_v4.py" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_guidance/step3_update_263_velocity_v4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +83,7 @@
     "Python.checkshape.executor": "Run",
     "Python.decidehudu.executor": "Run",
     "Python.extract263.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.plot.executor": "Run",
     "Python.plot_ingroup_velocityrecover_v1.executor": "Run",
     "Python.plot_scaled.executor": "Run",
@@ -161,6 +93,9 @@
     "Python.several_prompts.executor": "Run",
     "Python.several_prompts_good.executor": "Run",
     "Python.shift_position_rotation.executor": "Run",
+    "Python.step1.executor": "Run",
+    "Python.step3_update_263_velocity_v4.executor": "Run",
+    "Python.step3_update_263_velocity_v4_backup.executor": "Run",
     "Python.test.executor": "Run",
     "Python.update_263_velocity_good_batch_tryto_solve_rot.executor": "Run",
     "Python.update_263_velocity_good_batch_v2.executor": "Run",
@@ -188,28 +123,28 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/trajectory_guidance" />
+      <recent name="$PROJECT_DIR$/trajectory_guidance/original263data" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/263check_modified" />
       <recent name="$PROJECT_DIR$/checkV" />
-      <recent name="$PROJECT_DIR$/trajectory_guidance/hearteg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/trajectory_guidance/ouput" />
       <recent name="$PROJECT_DIR$/trajectory_guidance" />
       <recent name="$PROJECT_DIR$/trajectory_guidance/useless" />
       <recent name="$PROJECT_DIR$/useless_update_velocity" />
       <recent name="$PROJECT_DIR$/trajectory_guidance/hearteg" />
-      <recent name="$PROJECT_DIR$/llm_utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.update_263_velocity_good_batch_v3">
-    <configuration name="change" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="backup_step3_update_263_velocity_v4_backup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -218,12 +153,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/263check_modified" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trajectory_guidance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/263check_modified/change.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/backup_step3_update_263_velocity_v4_backup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -232,7 +167,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extract263" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -241,12 +176,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/263check_modified" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trajectory_guidance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/263check_modified/extract263.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -255,7 +190,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="step4_replace_first_three_frames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="plot_ingroup_velocityrecover_v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -264,12 +199,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trajectory_guidance/plot_fun" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/step4_replace_first_three_frames.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/plot_fun/plot_ingroup_velocityrecover_v1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -278,7 +213,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="update_263_velocity_good_batch_v3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="step1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -287,12 +222,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trajectory_guidance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/useless/update_263_velocity_good_batch_v3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/step1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,7 +236,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="useless_rotate_263" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="step3_update_263_velocity_v4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="trajectory_guidance_pipeline" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,12 +245,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trajectory_guidance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/useless/useless_rotate_263.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trajectory_guidance/step3_update_263_velocity_v4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -326,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.update_263_velocity_good_batch_v3" />
-        <item itemvalue="Python.extract263" />
-        <item itemvalue="Python.change" />
-        <item itemvalue="Python.step4_replace_first_three_frames" />
-        <item itemvalue="Python.useless_rotate_263" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.backup_step3_update_263_velocity_v4_backup" />
+        <item itemvalue="Python.step3_update_263_velocity_v4" />
+        <item itemvalue="Python.plot_ingroup_velocityrecover_v1" />
+        <item itemvalue="Python.step1" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +307,8 @@
       <workItem from="1730876581796" duration="14837000" />
       <workItem from="1730898745318" duration="39685000" />
       <workItem from="1731083856181" duration="62264000" />
-      <workItem from="1731343940818" duration="12058000" />
+      <workItem from="1731343940818" duration="14022000" />
+      <workItem from="1731462480164" duration="9124000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -558,7 +494,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731253252312</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="clean the project- not tested">
+      <option name="closed" value="true" />
+      <created>1731397448860</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731397448860</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,11 +537,14 @@
     <MESSAGE value="solve_faceforward_questions" />
     <MESSAGE value="solve_faceforward_questions_cleancode" />
     <MESSAGE value="finish all the traj part!" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish all the traj part!" />
+    <MESSAGE value="clean the project- not tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean the project- not tested" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/trajectory_guidance_pipeline$plot_ingroup_velocityrecover_v1.coverage" NAME="plot_ingroup_velocityrecover_v1 Coverage Results" MODIFIED="1731467356362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance/plot_fun" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$velocity_reconstruction_visualizer.coverage" NAME="velocity_reconstruction_visualizer Coverage Results" MODIFIED="1731161126027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$useless1.coverage" NAME="useless1 Coverage Results" MODIFIED="1731164639388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trajectory_guidance_pipeline$step3_update_263_velocity_v4.coverage" NAME="step3_update_263_velocity_v4 Coverage Results" MODIFIED="1731468612718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$2Dcoor_interpolated_sampled_reconstructed_points_128_v2.coverage" NAME="2Dcoor_interpolated_sampled_reconstructed_points_128_v2 Coverage Results" MODIFIED="1731162897695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$plot_unscaled_velocityrecover_v2.coverage" NAME="plot_unscaled_velocityrecover_v2 Coverage Results" MODIFIED="1731045847766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$2Dcoor_interpolated_sampled_reconstructed_points_128.coverage" NAME="2Dcoor_interpolated_sampled_reconstructed_points_128 Coverage Results" MODIFIED="1731084393507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
@@ -611,7 +558,9 @@
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_try.coverage" NAME="update_try Coverage Results" MODIFIED="1731231889358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$plot.coverage" NAME="plot Coverage Results" MODIFIED="1730812643556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$calculate_angleshift_using22_3.coverage" NAME="calculate_angleshift_using22_3 Coverage Results" MODIFIED="1731232973639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trajectory_guidance_pipeline$step3_update_263_velocity_v4_backup.coverage" NAME="step3_update_263_velocity_v4_backup Coverage Results" MODIFIED="1731469797852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_263_velocity_good_batch_tryto_solve_rot.coverage" NAME="update_263_velocity_good_batch_tryto_solve_rot Coverage Results" MODIFIED="1731247680515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trajectory_guidance_pipeline$step1.coverage" NAME="step1 Coverage Results" MODIFIED="1731466383295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_velocity4.coverage" NAME="update_velocity4 Coverage Results" MODIFIED="1731118811476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$rotate_263.coverage" NAME="rotate_263 Coverage Results" MODIFIED="1731247723963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_263_velocity_perfect1.coverage" NAME="update_263_velocity_perfect1 Coverage Results" MODIFIED="1731129706926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -626,6 +575,7 @@
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_velocity2.coverage" NAME="update_velocity2 Coverage Results" MODIFIED="1731057555074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$111.coverage" NAME="111 Coverage Results" MODIFIED="1731223968834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkshape_of263" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_2$Retrieval_based_solution.coverage" NAME="Retrieval_based_solution Coverage Results" MODIFIED="1728558862303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trajectory_guidance_pipeline$main.coverage" NAME="main Coverage Results" MODIFIED="1731470102363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$velocity_reconstruction_visualizer_v3.coverage" NAME="velocity_reconstruction_visualizer_v3 Coverage Results" MODIFIED="1731162602118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trajectory_guidance" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$update_velocity3.coverage" NAME="update_velocity3 Coverage Results" MODIFIED="1731059950772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_LLM_enhance_v4$decidehudu.coverage" NAME="decidehudu Coverage Results" MODIFIED="1731231684657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

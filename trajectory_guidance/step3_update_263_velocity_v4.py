@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import torch
+import traceback
 
 # Quaternion inversion function
 def qinv(q):
@@ -39,7 +40,7 @@ def compute_rot_vel_and_scaling(positions, standard_velocity_abs_mean=0.015):
     rot_vel[1:] = theta_unwrapped[1:] - theta_unwrapped[:-1]
 
     mean_abs_rot_vel = rot_vel.abs().mean()
-    print("standard_velocity_abs_mean", standard_velocity_abs_mean,"mean_abs_rot_vel", mean_abs_rot_vel)
+    print("standard_velocity_abs_mean", standard_velocity_abs_mean, "mean_abs_rot_vel", mean_abs_rot_vel)
     standard_scaling_factor = standard_velocity_abs_mean / mean_abs_rot_vel if mean_abs_rot_vel != 0 else 1.0
 
     return rot_vel, standard_scaling_factor
@@ -52,8 +53,8 @@ def compute_root_linear_velocity(positions, rot_vel):
     r_rot_ang = torch.cumsum(r_rot_ang, dim=0)
 
     r_rot_quat = torch.zeros(seq_len, 4)
-    r_rot_quat[:, 0] = torch.cos(r_rot_ang/2)
-    r_rot_quat[:, 2] = torch.sin(r_rot_ang/2)
+    r_rot_quat[:, 0] = torch.cos(r_rot_ang / 2)
+    r_rot_quat[:, 2] = torch.sin(r_rot_ang / 2)
 
     positions_3d = torch.zeros(seq_len, 3)
     positions_3d[:, [0, 2]] = positions
@@ -67,81 +68,80 @@ def compute_root_linear_velocity(positions, rot_vel):
 
     return root_linear_velocity
 
-# Main processing function
+# Enhanced processing function with detailed logging
 def process_and_save_scaled_velocity(positions_path, data_path, output_directory, standard_velocity_abs_mean=0.015):
-    os.makedirs(output_directory, exist_ok=True)
-    rawdata = torch.tensor(np.load(data_path), dtype=torch.float32)
-    positions = torch.tensor(np.load(positions_path), dtype=torch.float32)
+    try:
+        print(f"Processing positions file: {positions_path}")
+        print(f"Processing data file: {data_path}")
 
-    origin_rot_vel, standard_scaling_factor = compute_rot_vel_and_scaling(positions, standard_velocity_abs_mean)
+        os.makedirs(output_directory, exist_ok=True)
+        rawdata = torch.tensor(np.load(data_path), dtype=torch.float32)
+        positions = torch.tensor(np.load(positions_path), dtype=torch.float32)
 
-    #    standard_scaling_factor = standard_velocity_abs_mean 0.015 / mean_abs_rot_vel if mean_abs_rot_vel != 0 else 1.0
-    print("standard_scaling_factor", standard_scaling_factor)
-    if standard_scaling_factor <= 0.12:
-        scaling_factors = [standard_scaling_factor, standard_scaling_factor * 3,
-                           standard_scaling_factor * 6, 1.0]
-    elif standard_scaling_factor <0.2:
-        scaling_factors = [standard_scaling_factor, standard_scaling_factor * 3, 1.0]
-    elif standard_scaling_factor <0.5:
-        scaling_factors = [ standard_scaling_factor, 1.0]
-    elif standard_scaling_factor >1 and standard_scaling_factor <1.5:
-        scaling_factors = [1.0]
-    else:
-        scaling_factors = [standard_scaling_factor, 1.0]
+        origin_rot_vel, standard_scaling_factor = compute_rot_vel_and_scaling(positions, standard_velocity_abs_mean)
 
-    original_filename = os.path.basename(positions_path)
-    filename_wo_ext, ext = os.path.splitext(original_filename)
+        # Print the standard_scaling_factor
+        print(f"standard_scaling_factor: {standard_scaling_factor}")
 
-    for scaling_factor in scaling_factors:
-        scaled_rot_vel = origin_rot_vel * scaling_factor
-        root_linear_velocity = compute_root_linear_velocity(positions, scaled_rot_vel)
+        if standard_scaling_factor <= 0.12:
+            scaling_factors = [standard_scaling_factor, standard_scaling_factor * 3,
+                               standard_scaling_factor * 6, 1.0]
+        elif standard_scaling_factor < 0.2:
+            scaling_factors = [standard_scaling_factor, standard_scaling_factor * 3, 1.0]
+        elif standard_scaling_factor < 0.5:
+            scaling_factors = [standard_scaling_factor, 1.0]
+        elif 1 < standard_scaling_factor < 1.5:
+            scaling_factors = [1.0]
+        else:
+            scaling_factors = [standard_scaling_factor, 1.0]
 
-        updated_rawdata = rawdata.clone()
-        # updated_rawdata[..., 0] = scaled_rot_vel
-        updated_rawdata[3:, 0] = scaled_rot_vel[3:]
+        original_filename = os.path.basename(positions_path)
+        filename_wo_ext, ext = os.path.splitext(original_filename)
 
+        for scaling_factor in scaling_factors:
+            print(f"Scaling factor: {scaling_factor}")
+            scaled_rot_vel = origin_rot_vel * scaling_factor
+            root_linear_velocity = compute_root_linear_velocity(positions, scaled_rot_vel)
 
-        root_linear_velocity_standard = 0.036666445
-        velocity_magnitude = np.linalg.norm(root_linear_velocity, axis=-1, keepdims=True)
-        velocity_magnitude_absmean = np.mean(np.abs(velocity_magnitude))
-        root_linear_velocity_scalestandard = root_linear_velocity_standard / velocity_magnitude_absmean
+            updated_rawdata = rawdata.clone()
+            # updated_rawdata[..., 0] = scaled_rot_vel
+            # Ensure that the lengths match before assignment
+            if updated_rawdata.shape[0] != scaled_rot_vel.shape[0]:
+                print(f"Shape mismatch: updated_rawdata has {updated_rawdata.shape[0]} samples, "
+                      f"scaled_rot_vel has {scaled_rot_vel.shape[0]} samples.")
+                raise ValueError(f"Shape mismatch between updated_rawdata and scaled_rot_vel for file: {positions_path}")
 
-        # updated_rawdata[..., 1:3] = root_linear_velocity * root_linear_velocity_scale
-        # new_filename_1 = f"{filename_wo_ext}_rot_scale_{scaling_factor}_root_linear_velocity_{root_linear_velocity_scale}{ext}"
-        # new_output_path_1 = os.path.join(output_directory, new_filename_1)
-        # np.save(new_output_path_1, updated_rawdata.numpy())
-        # print(f"Saved updated data to {new_output_path_1}")
-        #
-        # root_linear_velocity_scale = 1.0
-        # updated_rawdata[..., 1:3] = root_linear_velocity * root_linear_velocity_scale
-        # new_filename_2 = f"{filename_wo_ext}_rot_scale_{scaling_factor}_root_linear_velocity_{root_linear_velocity_scale}{ext}"
-        # new_output_path_2 = os.path.join(output_directory, new_filename_2)
-        # np.save(new_output_path_2, updated_rawdata.numpy())
-        # print(f"Saved updated data to {new_output_path_2}")
-        #
+            updated_rawdata[3:, 0] = scaled_rot_vel[3:]
 
-        new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}{ext}"
-        updated_rawdata[:, 1] = 0
-        updated_rawdata[:, 2] = 0.03
+            root_linear_velocity_standard = 0.036666445
+            velocity_magnitude = np.linalg.norm(root_linear_velocity, axis=-1, keepdims=True)
+            velocity_magnitude_absmean = np.mean(np.abs(velocity_magnitude))
+            root_linear_velocity_scale_standard = root_linear_velocity_standard / velocity_magnitude_absmean
 
-        new_output_path = os.path.join(output_directory, new_filename)
-        np.save(new_output_path, updated_rawdata.numpy())
-        print(f"Saved updated data to {new_output_path}")
+            # Optionally, you can print intermediate tensor sizes
+            print(f"rawdata shape: {rawdata.shape}")
+            print(f"positions shape: {positions.shape}")
+            print(f"scaled_rot_vel shape: {scaled_rot_vel.shape}")
+            print(f"root_linear_velocity shape: {root_linear_velocity.shape}")
 
+            new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}{ext}"
+            updated_rawdata[:, 1] = 0
+            updated_rawdata[:, 2] = 0.06
 
-# # Run the function with your specified paths
-# positions_path = './interpolated_sampled/Infinity_controlvelocity0.08_interpolated_128.npy'
-# data_path = '/Users/huangziheng/PycharmProjects/final_LLM_enhance_v4/S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
-# output_directory = './263output_afterguidance/'
-#
-# process_and_save_scaled_velocity(positions_path, data_path, output_directory)
+            new_output_path = os.path.join(output_directory, new_filename)
+            np.save(new_output_path, updated_rawdata.numpy())
+            print(f"Saved updated data to {new_output_path}")
 
+    except Exception as e:
+        print(f"Error processing files:\nPositions Path: {positions_path}\nData Path: {data_path}")
+        print(f"Exception: {e}")
+        traceback.print_exc()
+        # Optionally, you can re-raise the exception if you want the main executor to handle it
+        raise
 
 ############################################################################################################
 import concurrent.futures
-import os
 from glob import glob
-
 
 def step3_get263data_parallel_process_files(positions_directory, data_directory, output_directory, max_workers=None):
     """
@@ -169,11 +169,15 @@ def step3_get263data_parallel_process_files(positions_directory, data_directory,
             print(f"No corresponding data file found for positions file: {pos_path}")
             continue
         data_path = data_files[0]  # Adjust if multiple matches are possible
-        tasks.append((pos_path, data_path, output_directory))
+        tasks.append((pos_path, data_path))  # Removed output_directory from the tuple
+
+    print(f"Total tasks to process: {len(tasks)}")
 
     # Set the number of workers based on system capability if not provided
     if max_workers is None:
         max_workers = min(32, os.cpu_count() + 4)
+
+    print(f"Using {max_workers} workers for parallel processing.")
 
     # Use ProcessPoolExecutor for parallel processing
     with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
@@ -187,80 +191,16 @@ def step3_get263data_parallel_process_files(positions_directory, data_directory,
             try:
                 future.result()
             except Exception as exc:
-                print(f"An exception occurred: {exc}")
-
+                print(f"An exception occurred during processing: {exc}")
 
 if __name__ == "__main__":
+    positions_interpolated = './output/interpolated_sampled'
+
+    raw_data_directory = '/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/'
+    final_correct_263before3rep = './output/263final_correct/'
 
     step3_get263data_parallel_process_files(
-        positions_directory='./ouput/interpolated_sampled/',
-        data_directory='./S-shape of walk_and_wave/raw/',
-        output_directory='./ouput/263final_correct/'
+        positions_directory=positions_interpolated,
+        data_directory=raw_data_directory,
+        output_directory=final_correct_263before3rep
     )
-
-
-#
-# import concurrent.futures
-# from glob import glob
-#
-# def main():
-#     # Define directories
-#     positions_directory = './ouput/interpolated_sampled/'
-#     aaaa = './S-shape of walk_and_wave/raw/raw_sample0_repeat0_len128.npy'
-#     data_directory = './S-shape of walk_and_wave/raw/'
-#     output_directory = './ouput/263final_correct/'
-#
-#     # Find all positions files
-#     positions_files = glob(os.path.join(positions_directory, '*.npy'))
-#
-#     # Assuming that data files have a corresponding name to positions files.
-#     # Modify the mapping logic below if your data files have a different naming convention.
-#     tasks = []
-#     for pos_path in positions_files:
-#         filename = os.path.basename(pos_path)
-#
-#
-#         # # Example mapping: Replace 'interpolated' with 'raw_sample' or adjust as needed
-#         # # Modify this according to your actual naming convention
-#         # # For instance, if positions file is 'Infinity_controlvelocity0.08_interpolated_128.npy'
-#         # # and data file is 'raw_sample0_repeat0_len128.npy', you need a way to map them
-#         # # Here, we'll assume they share the same base name before certain patterns
-#         # # You may need to adjust this part based on your actual filenames
-#         #
-#         # # Example: Extracting a unique identifier from the positions filename
-#         # # Adjust this parsing as per your filename structure
-#         # base_name = filename.replace('_interpolated', '').replace('.npy', '')
-#         # # Now, find the corresponding data file
-#         # # This is a placeholder logic; adjust according to your actual file naming
-#         #
-#         # data_files = glob(os.path.join(data_directory, f"*{base_name}*.npy"))
-#
-#         data_files = glob(os.path.join(data_directory, "*.npy"))
-#
-#         if not data_files:
-#             print(f"No corresponding data file found for positions file: {pos_path}")
-#             continue
-#         data_path = data_files[0]  # Take the first match; adjust if multiple matches are possible
-#         tasks.append((pos_path, data_path, output_directory))
-#
-#     # Define the number of workers; adjust as per your CPU cores
-#     max_workers = min(32, os.cpu_count() + 4)  # Example: Adjust based on your system
-#
-#     # Use ProcessPoolExecutor for CPU-bound tasks
-#     with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
-#         futures = []
-#         for task in tasks:
-#             positions_path, data_path, out_dir = task
-#             futures.append(executor.submit(process_and_save_scaled_velocity, positions_path, data_path, out_dir))
-#
-#         # Optionally, you can monitor the progress
-#         for future in concurrent.futures.as_completed(futures):
-#             future.result()
-#             # try:
-#             #     future.result()
-#             # except Exception as exc:
-#             #     print(f"Generated an exception: {exc}")
-#
-# if __name__ == "__main__":
-#     main()
-#
