@@ -10,8 +10,6 @@ from llm_utils import generate_sequence_explanation_prompt_json
 from llm_config  import llm
 
 
-
-
 def analyze_fine_moton_control_txt(action):
     # Step 1: Get sequence explanation
     sequence_explanation_prompt = generate_sequence_explanation_prompt(action)
