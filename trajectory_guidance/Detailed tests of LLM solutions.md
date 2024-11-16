@@ -267,6 +267,10 @@ t_range = (0, 1)
 **The result motion edited to the orginal motion: a man walks and waves his hands**
 
 
+https://github.com/user-attachments/assets/82d5bafa-440d-4ddc-a1af-69eaa408cb58
+
+
+
 
 ### Trapezoid: a man walks and waves his hands in the trajectory that forms a trapezoid with one pair of parallel sides.
 
@@ -482,6 +486,10 @@ t_range_I_got: (0, 62.83185307179586)
 
 
 **The result motion edited to the orginal motion: a man walks and waves his hands**
+
+
+
+Uploading Spiral_controlvelocity0.08_interpolated_128_rot_scale_0.174_processed.mp4…
 
 
 
