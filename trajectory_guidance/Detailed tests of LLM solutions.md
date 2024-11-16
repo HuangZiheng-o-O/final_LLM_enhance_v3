@@ -577,94 +577,6 @@ t_range_I_got: (0, 6.283185307179586)
 https://github.com/user-attachments/assets/924efc45-bb7e-49d3-a1e1-9166932a67a0
 
 
-
-### Wave: a man walks and waves his hands in the trajectory that follows a wavy pattern.
-
-```
-Now the input is:
-
-"I want to draw a Description = 'Wave: a man walks in the trajectory that follows a wavy pattern.'. Give me `def shape_curve(t)`."
-
-```
-
-**Model Output**
-
-````
-
-Model: For this task, we need to create an open trajectory that follows a wavy pattern. The wave is a simple curve, so the trajectory can be directly defined using a sinusoidal function. Here's how you can represent this waveform in a mathematical function:
-
-### Trajectory Analysis:
-
-1. **Closed or Open Trajectory Decision:** Since a wave does not form a closed loop and just moves forward in a sinusoidal pattern, it is an open trajectory.
-
-2. **Extract the Trajectory Using Fixed Format Breakdown:** 
-   - The wavy pattern can be represented as a sine wave. Hence, the trajectory will move horizontally while oscillating vertically.
-
-3. **Trajectory Analysis:** 
-   - The sine wave is the ideal representation of this pattern because it naturally alternates up and down.
-   - To maintain the uniform movement and speed, we'll adjust the parameters so that each oscillation is smooth and continuous.
-
-### Final Mathematical Function:
-
-The sine wave can be expressed with:
-- `x(t) = t` (representing horizontal uniform movement over time)
-- `y(t) = A * sin(B * t)` where `A` is the amplitude (height of the wave peaks) and `B` is the frequency (how many wave cycles happen in a unit of `t`).
-
-```python
-import math
-
-def shape_curve(t):
-    A = 5  # Amplitude of the wave
-    B = 1  # Frequency of the wave
-
-    x = t
-    y = A * math.sin(B * t)
-
-    return x, y
-
-# Specify the range of t according to how long you wish the wave to extend. 
-# For example, you can set the range to cover one full wave cycle or more.
-t_range = (0, 10 * math.pi)  # This will cover 5 full wave cycles
-```
-
-### Explanation:
-- **Amplitude (A)** is set to 5 units, meaning the wave oscillates 5 units above and below the central line (y = 0).
-- **Frequency (B)** is set to 1, determining how many complete waves appear within the defined `t_range`.
-- **Range of t** is chosen to cover several cycles of the wave, starting from 0 and ending at `10 * π`, giving us 5 full cycles given our frequency setup. Adjust this range depending on how long you want your wave to be.
-
-This continuous function ensures even mapping of the wave trajectory over time (t), with no abrupt jumps or discontinuities.
-
-````
-
-**extracted_code**
-
-```
-extracted_code: import math
-
-def shape_curve(t):
-    A = 5  # Amplitude of the wave
-    B = 1  # Frequency of the wave
-
-    x = t
-    y = A * math.sin(B * t)
-
-    return x, y
-
-# Specify the range of t according to how long you wish the wave to extend. 
-# For example, you can set the range to cover one full wave cycle or more.
-t_range = (0, 10 * math.pi)  # This will cover 5 full wave cycles
-shape_curve_I_got: <function shape_curve at 0x14cd6b380>
-t_range_I_got: (0, 31.41592653589793)
-```
-
-**The curve result:**
-
-
-
-**The result motion edited to the orginal motion: a man walks and waves his hands**
-
-
-
 ### Circle: a man walks and waves his hands in the trajectory that forms a complete circle.
 
 ```
@@ -1149,7 +1061,8 @@ t_range_I_got: (0, 3.141592653589793)
 
 
 
-Uploading Semicircle_controlvelocity0.08_interpolated_128_rot_scale_0.408_processed.mp4…
+https://github.com/user-attachments/assets/224d8b4e-cd50-4efb-b272-fcd48af4325c
+
 
 
 
