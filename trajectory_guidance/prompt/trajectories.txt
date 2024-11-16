@@ -1,1 +1,1 @@
-semi_cirlcle_avoid_walk ：a man is walking/runing, he tried to avoid one sphere using semi_cirlcle trajectory in the middle. It means that he walks straight 10 m first, then turn using a  semi_cirlcle trajectory(10 m ), than walk straight (10 m )again.
+A man is walking in a straight line.

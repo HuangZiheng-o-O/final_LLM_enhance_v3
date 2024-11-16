@@ -126,7 +126,7 @@ def process_and_save_scaled_velocity(positions_path, data_path, output_directory
 
             new_filename = f"{filename_wo_ext}_rot_scale_{scaling_factor:.3f}{ext}"
             updated_rawdata[:, 1] = 0
-            updated_rawdata[:, 2] = 0.06
+            # updated_rawdata[:, 2] = 0.06
 
             new_output_path = os.path.join(output_directory, new_filename)
             np.save(new_output_path, updated_rawdata.numpy())

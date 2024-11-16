@@ -51,13 +51,11 @@ def format_keyframes(keyframes: list, pattern_name="origin_30points",keyframes_s
 
     return formatted_string
 
-
 # pattern_name is "PALCEHOLDER2"
 def replace_pattern_name(follow_up_question: str, pattern_name: str) -> str:
     # Replace the placeholder with the keyframes string
     follow_up_question = follow_up_question.replace("PALCEHOLDER2", pattern_name)
     return follow_up_question
-
 
 def extract_code_block(text: str) -> str:
     # 尝试提取带语言说明的代码块
@@ -173,7 +171,6 @@ def execute_code_and_compute_keyframes(extracted_code: str, log_file: str = "./l
     # return keyframes
     #
 
-
 def interpolate_and_resample_velocity(original_points):
     x = np.array([p[0] for p in original_points])
     y = np.array([p[1] for p in original_points])
@@ -217,8 +214,6 @@ def interpolate_and_resample_velocity(original_points):
     root_linear_velocity = np.array(root_linear_velocity)  # Convert to numpy array
 
     return root_linear_velocity
-
-
 
 def interpolate_and_resample_velocity2(original_points, num_output_points=200):
     x = np.array([p[0] for p in original_points], dtype=float)

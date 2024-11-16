@@ -26,15 +26,15 @@ def main():
     positions_interpolated = './output/interpolated_sampled'
     output_sampling_image_folder_interpolated = './output/interpolated_sampled_images'
     target_mean = 0.08
-    num_points = 140
+    num_points = 60
 
 
     # positions_interpolated = './output/interpolated_sampled/'
-    raw_data_directory = '/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/'
+    raw_data_directory = '/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/straight/'
     final_correct_263before3rep = './output/263final_correct/'
 
     # output_dir_replace = "./output/263final_correct"
-    raw_path = "/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/0.npy"
+    raw_path = "/Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/trajectory_guidance/original263data/straight/trajectory1.npy"
     new_output_dir_replace = "./output/263final_correct_replace3frames"
 
 

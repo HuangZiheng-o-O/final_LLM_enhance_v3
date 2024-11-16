@@ -26,9 +26,8 @@ Note: Whether it's to the right, left, or any clock direction, it's always refer
 **Note:** Clock directions are always referenced from the perspective of the person performing the trajectory.
 Ensure that both x and y coordinates change uniformly over time (`t`). This means the trajectory should reflect a consistent speed of movement.
 To ensure no "instant jumps" in the generated trajectory, specify that the trajectory function must have smooth transitions between segments. Emphasize continuity, meaning each segment's start must align with the previous segment's end, avoiding abrupt shifts. Additionally, ensure uniform speed across the entire range of `t`, with x and y coordinates changing evenly over time.
-再次强调：为了确保平滑过渡，您需要调整每一段段的公式，使其从上一段的终点坐标开始，而不是独立地重新定义 x 和 y。如果有不同的t段落，每一段的开始坐标和结束坐标应该在注释中标注出来！start_x, start_y, end_x, end_y
-再次强调：为了确保平滑过渡，您需要调整每一段段的公式，使其从上一段的终点坐标开始，而不是独立地重新定义 x 和 y。如果有不同的t段落，每一段的开始坐标和结束坐标应该在注释中标注出来！start_x, start_y, end_x, end_y
-
+Emphasize once again: To ensure a smooth transition, you need to adjust the formulas for each segment so that they start from the endpoint coordinates of the previous segment, rather than independently redefining ( x ) and ( y ). If there are multiple segments, the starting and ending coordinates for each segment should be clearly marked in the comments as **start_x, start_y, end_x, end_y**.Emphasize once again: To ensure a smooth transition, you need to adjust the formulas for each segment so that they start from the endpoint coordinates of the previous segment, rather than independently redefining ( x ) and ( y ). If there are multiple segments, the starting and ending coordinates for each segment should be clearly marked in the comments as **start_x, start_y, end_x, end_y**.
+Emphasize once again: To ensure a smooth transition, you need to adjust the formulas for each segment so that they start from the endpoint coordinates of the previous segment, rather than independently redefining \( x \) and \( y \). If there are multiple segments, the starting and ending coordinates for each segment should be clearly marked in the comments as **start_x, start_y, end_x, end_y**.
 
 4. **Mathematical Functions:** Present the final code strictly in the form provided below, ensuring it is correct and can run without errors and READY TO USE.
 
