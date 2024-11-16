@@ -1,6 +1,6 @@
 
 
-# Detailed tests of LLM solutions
+# Detailed Tests of Trajectory Guidance
 
 ## Method
 
