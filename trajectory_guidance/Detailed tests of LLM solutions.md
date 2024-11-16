@@ -260,7 +260,7 @@ t_range = (0, 1)
 
 ```
 
-**The curve result:**
+
 
 
 
@@ -387,7 +387,7 @@ t_range_I_got: (0, 1)
 
 ```
 
-**The curve result:**
+
 
 
 
@@ -485,7 +485,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6b1a0>
 t_range_I_got: (0, 62.83185307179586)
 ```
 
-**The curve result:**
+
 
 
 
@@ -566,7 +566,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6aca0>
 t_range_I_got: (0, 6.283185307179586)
 ```
 
-**The curve result:**
+
 
 
 
@@ -648,7 +648,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6a840>
 t_range_I_got: (0, 6.283185307179586)
 ```
 
-**The curve result:**
+
 
 
 
@@ -787,7 +787,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6b7e0>
 t_range_I_got: (0, 3)
 ```
 
-**The curve result:**
+
 
 
 
@@ -896,7 +896,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6be20>
 t_range_I_got: (0, 1)
 ```
 
-**The curve result:**
+
 
 
 
@@ -977,7 +977,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6aac0>
 t_range_I_got: (0, 6.283185307179586)
 ```
 
-**The curve result:**
+
 
 
 
@@ -1053,7 +1053,7 @@ shape_curve_I_got: <function shape_curve at 0x14cd6aac0>
 t_range_I_got: (0, 3.141592653589793)
 ```
 
-**The curve result:**
+
 
 
 
@@ -1084,33 +1084,7 @@ https://github.com/user-attachments/assets/224d8b4e-cd50-4efb-b272-fcd48af4325c
 
 ```
 
-**The curve result:**
 
-
-
-**The result motion edited to the orginal motion: a man walks and waves his hands**
-
-
-
-### S-shaped: a man walks and waves his hands in the trajectory of a S-shape
-
-```
-
-```
-
-**Model Output**
-
-```
-
-```
-
-**extracted_code**
-
-```
-
-```
-
-**The curve result:**
 
 
 
@@ -1136,7 +1110,7 @@ https://github.com/user-attachments/assets/224d8b4e-cd50-4efb-b272-fcd48af4325c
 
 ```
 
-**The curve result:**
+
 
 
 
@@ -1162,7 +1136,33 @@ https://github.com/user-attachments/assets/224d8b4e-cd50-4efb-b272-fcd48af4325c
 
 ```
 
-**The curve result:**
+
+
+
+
+**The result motion edited to the orginal motion: a man walks and waves his hands**
+
+
+
+### S-shaped: a man walks and waves his hands in the trajectory of a S-shape
+
+```
+
+```
+
+**Model Output**
+
+```
+
+```
+
+**extracted_code**
+
+```
+
+```
+
+
 
 
 
