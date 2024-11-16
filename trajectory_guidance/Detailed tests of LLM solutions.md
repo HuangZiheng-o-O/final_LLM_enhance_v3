@@ -395,6 +395,10 @@ t_range_I_got: (0, 1)
 
 
 
+https://github.com/user-attachments/assets/15e00190-28d7-4d60-a550-3fe03a3cc882
+
+
+
 
 
 ### 'Spiral: a man walks and waves his hands in the trajectory that starts at the center and spirals outward.'
@@ -489,9 +493,11 @@ t_range_I_got: (0, 62.83185307179586)
 
 
 
-Uploading Spiral_controlvelocity0.08_interpolated_128_rot_scale_0.174_processed.mp4…
+
+https://github.com/user-attachments/assets/69ac5f17-daef-430d-ae10-ee82ed2552bb
 
 
+ 
 
 ### Heart: a man walks and waves his hands in the trajectory that forms the shape of a heart.
 
@@ -565,6 +571,10 @@ t_range_I_got: (0, 6.283185307179586)
 
 
 **The result motion edited to the orginal motion: a man walks and waves his hands**
+
+
+
+https://github.com/user-attachments/assets/924efc45-bb7e-49d3-a1e1-9166932a67a0
 
 
 
@@ -734,6 +744,10 @@ t_range_I_got: (0, 6.283185307179586)
 
 
 
+https://github.com/user-attachments/assets/648b3212-dea5-42b5-ae7d-e62962c484ff
+
+
+
 ### Triangle: a man walks and waves his hands in the trajectory that forms an equilateral triangle.
 
 ```
@@ -868,6 +882,10 @@ t_range_I_got: (0, 3)
 **The result motion edited to the orginal motion: a man walks and waves his hands**
 
 
+https://github.com/user-attachments/assets/78c03caa-6eac-4aa4-a0a6-ae6d4c4a0b8c
+
+
+
 
 ### Pentagon: a man walks and waves his hands in the trajectory that forms a regular pentagon.
 
@@ -973,6 +991,10 @@ t_range_I_got: (0, 1)
 **The result motion edited to the orginal motion: a man walks and waves his hands**
 
 
+https://github.com/user-attachments/assets/57a4f38a-39b1-4788-a772-c8498b9d4f41
+
+
+
 
 ### Infinity: a man walks and waves his hands in the trajectory that forms the shape of an infinity symbol.
 
@@ -1050,6 +1072,10 @@ t_range_I_got: (0, 6.283185307179586)
 **The result motion edited to the orginal motion: a man walks and waves his hands**
 
 
+https://github.com/user-attachments/assets/5edabfab-2c67-4485-9867-b3f6c2d09291
+
+
+
 
 ### Semicircle: a man walks and waves his hands in the trajectory that forms a half-circle.
 
@@ -1120,6 +1146,10 @@ t_range_I_got: (0, 3.141592653589793)
 
 
 **The result motion edited to the orginal motion: a man walks and waves his hands**
+
+
+
+Uploading Semicircle_controlvelocity0.08_interpolated_128_rot_scale_0.408_processed.mp4…
 
 
 
