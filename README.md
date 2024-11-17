@@ -1,4 +1,4 @@
-PLEASE SEE Detailed Tests of Trajectory Guidance
+PLEASE SEE trajectory_guidance/Detailed tests of LLM solutions.md  for detailed test results.
 
 
 https://github.com/user-attachments/assets/69ac5f17-daef-430d-ae10-ee82ed2552bb
