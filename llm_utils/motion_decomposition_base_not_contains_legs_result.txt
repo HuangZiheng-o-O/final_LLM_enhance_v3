@@ -1,0 +1,129 @@
+/Users/huangziheng/opt/anaconda3/envs/deep_learning_env/bin/python /Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/llm_utils/motion_decomposition_base_not_contains_legs.py
+Action: The man walks forward while raising his left hand and lowering his right hand at the same time.
+Base Motion:
+<BASE_MOTION>
+The man walks forward.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm raises"
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm lowers"
+  },
+  {
+    "body part": "left leg",
+    "description": "none"
+  },
+  {
+    "body part": "right leg",
+    "description": "none"
+  }
+]
+==================================================
+Action: A woman hops forward while holding a T-pose.
+Base Motion:
+<BASE_MOTION>
+The woman moves forward in a hopping motion while maintaining an upright posture.
+</BASE_MOTION>
+<BaseEND>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm is extended horizontally to form a T-pose."
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm is extended horizontally to form a T-pose."
+  },
+  {
+    "body part": "left leg",
+    "description": "A person's left leg hops forward."
+  },
+  {
+    "body part": "right leg",
+    "description": "A person's right leg hops forward."
+  }
+]
+==================================================
+Action: The person performs a rowing motion with their legs spread wide, moving their arms back and forth.
+Base Motion:
+<BASE_MOTION>
+The person moves their body in a forward and backward motion with a stable torso and head alignment.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm moves back and forth."
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm moves back and forth."
+  },
+  {
+    "body part": "left leg",
+    "description": "A person's left leg is spread wide."
+  },
+  {
+    "body part": "right leg",
+    "description": "A person's right leg is spread wide."
+  }
+]
+==================================================
+Action: A dancer spins gracefully with arms extended and legs crossed.
+Base Motion:
+<BASE_MOTION>
+The dancer rotates in a graceful spin.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm extends"
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm extends"
+  },
+  {
+    "body part": "left leg",
+    "description": "A person's left leg crosses"
+  },
+  {
+    "body part": "right leg",
+    "description": "A person's right leg crosses"
+  }
+]
+==================================================
+Action: The runner sprints ahead without any arm movements.
+Base Motion:
+<BASE_MOTION>
+The runner sprints forward with their body moving in a straight trajectory.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "none"
+  },
+  {
+    "body part": "right arm",
+    "description": "none"
+  },
+  {
+    "body part": "left leg",
+    "description": "A person's left leg moves forward"
+  },
+  {
+    "body part": "right leg",
+    "description": "A person's right leg moves forward"
+  }
+]
+==================================================
+
+Process finished with exit code 0

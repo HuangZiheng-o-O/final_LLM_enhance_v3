@@ -1,0 +1,90 @@
+/Users/huangziheng/opt/anaconda3/envs/deep_learning_env/bin/python /Users/huangziheng/PycharmProjects/trajectory_guidance_pipeline/llm_utils/motion_decomposition.py
+Edits Response:
+<LOCAL_EDITS>
+A person raises his left hand and lowers his right hand.
+</LOCAL_EDITS>
+Action: The man walks forward while raising his left hand and lowering his right hand at the same time.
+Base Motion:
+<BASE_MOTION>
+The man walks forward.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm raises"
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm lowers"
+  },
+  {
+    "body part": "left hand",
+    "description": "none"
+  },
+  {
+    "body part": "right hand",
+    "description": "none"
+  }
+]
+==================================================
+Edits Response:
+<LOCAL_EDITS>
+A person holds both arms out to the sides in a T-pose.
+</LOCAL_EDITS>
+Action: A woman hops forward while holding a T-pose.
+Base Motion:
+<BASE_MOTION>
+The woman hops forward.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm is held out to the side"
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm is held out to the side"
+  },
+  {
+    "body part": "left hand",
+    "description": "none"
+  },
+  {
+    "body part": "right hand",
+    "description": "none"
+  }
+]
+==================================================
+Edits Response:
+<LOCAL_EDITS>
+A person moves their arms back and forth.
+</LOCAL_EDITS>
+Action: The person performs a rowing motion with their legs spread wide, moving their arms back and forth.
+Base Motion:
+<BASE_MOTION>
+The person performs a rowing motion by shifting their body weight with their legs wide apart while maintaining an upright head position.
+</BASE_MOTION>
+Local Edits:
+[
+  {
+    "body part": "left arm",
+    "description": "A person's left arm moves back and forth"
+  },
+  {
+    "body part": "right arm",
+    "description": "A person's right arm moves back and forth"
+  },
+  {
+    "body part": "left hand",
+    "description": "none"
+  },
+  {
+    "body part": "right hand",
+    "description": "none"
+  }
+]
+==================================================
+
+Process finished with exit code 0
