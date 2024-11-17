@@ -30,6 +30,11 @@ You are tasked with analyzing the following action description and extracting th
 - It encompasses the general action without considering specific movements of individual body parts.
 - The base motion should include head movements and global trajectories but exclude specific movements of the limbs (arms, legs).
 
+**Requirement of Base Motion:**
+ rewrite the prompts by removing descriptions that are not included in the motion dataset (e.g., "falling onto a tatami mat" or "making the Wakanda Forever gesture"). Such descriptions could lead to failures in the motion generation process. GPT-4o replaces these abstract terms with more general ones (e.g., "tatami mat" → "ground") and extracts implicit motion information from the user's original input (e.g., "Wakanda Forever gesture" → "crossing arms over the chest"). The rewritten text uses terminology drawn from the training dataset, making it easier for the motion generation model to understand. Thanks to the powerful generalization and reasoning capabilities of large language models, this process retains nearly all the information.
+Base Motion should be simple and clear; clear is important. avoiding use abstract or complex words.
+Base Motion should be simple and clear; clear is important. avoiding use abstract or complex words.
+DO NOT use vague words. For example, " hops forward " shouldn't be changed to move forward.
 <INPUT>
 {action_description}
 </INPUT>
@@ -86,7 +91,7 @@ You are tasked with analyzing the differences between the action description and
   - "left leg"
   - "right leg"
 - For each body part, describe its movement concisely and specifically in the format:
-  "A person's [body part] [action]".
+  "A person's [body part] [action]". OR "A person [action]". 
 - For body parts without specific movements, the description should be "none".
 - Use clear and unambiguous language.
 - Do not include any reasoning, explanations, or additional commentary.
@@ -156,7 +161,7 @@ if __name__ == "__main__":
     # Example actions to test
     actions_to_test = [
         "The man walks forward while raising his left hand and lowering his right hand at the same time.",
-        "A woman hops forward while holding a T-pose.",
+        "A woman runs forward while holding a T-pose.",
         "The person performs a rowing motion with their legs spread wide, moving their arms back and forth.",
         "A dancer spins gracefully with arms extended and legs crossed.",
         "The runner sprints ahead without any arm movements."

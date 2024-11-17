@@ -8,11 +8,11 @@ Local Edits:
 [
   {
     "body part": "left arm",
-    "description": "A person's left arm raises"
+    "description": "A person's left arm is raised."
   },
   {
     "body part": "right arm",
-    "description": "A person's right arm lowers"
+    "description": "A person's right arm is lowered."
   },
   {
     "body part": "left leg",
@@ -24,36 +24,35 @@ Local Edits:
   }
 ]
 ==================================================
-Action: A woman hops forward while holding a T-pose.
+Action: A woman runs forward while holding a T-pose.
 Base Motion:
 <BASE_MOTION>
-The woman moves forward in a hopping motion while maintaining an upright posture.
+A woman runs forward.
 </BASE_MOTION>
-<BaseEND>
 Local Edits:
 [
   {
     "body part": "left arm",
-    "description": "A person's left arm is extended horizontally to form a T-pose."
+    "description": "A person's left arm is extended outward in a T-pose."
   },
   {
     "body part": "right arm",
-    "description": "A person's right arm is extended horizontally to form a T-pose."
+    "description": "A person's right arm is extended outward in a T-pose."
   },
   {
     "body part": "left leg",
-    "description": "A person's left leg hops forward."
+    "description": "none"
   },
   {
     "body part": "right leg",
-    "description": "A person's right leg hops forward."
+    "description": "none"
   }
 ]
 ==================================================
 Action: The person performs a rowing motion with their legs spread wide, moving their arms back and forth.
 Base Motion:
 <BASE_MOTION>
-The person moves their body in a forward and backward motion with a stable torso and head alignment.
+The person moves their body forward and backward.
 </BASE_MOTION>
 Local Edits:
 [
@@ -78,32 +77,32 @@ Local Edits:
 Action: A dancer spins gracefully with arms extended and legs crossed.
 Base Motion:
 <BASE_MOTION>
-The dancer rotates in a graceful spin.
+The dancer spins gracefully.
 </BASE_MOTION>
 Local Edits:
 [
   {
     "body part": "left arm",
-    "description": "A person's left arm extends"
+    "description": "A person's left arm is extended."
   },
   {
     "body part": "right arm",
-    "description": "A person's right arm extends"
+    "description": "A person's right arm is extended."
   },
   {
     "body part": "left leg",
-    "description": "A person's left leg crosses"
+    "description": "A person's left leg is crossed."
   },
   {
     "body part": "right leg",
-    "description": "A person's right leg crosses"
+    "description": "A person's right leg is crossed."
   }
 ]
 ==================================================
 Action: The runner sprints ahead without any arm movements.
 Base Motion:
 <BASE_MOTION>
-The runner sprints forward with their body moving in a straight trajectory.
+The runner moves forward at a fast pace.
 </BASE_MOTION>
 Local Edits:
 [
@@ -117,11 +116,11 @@ Local Edits:
   },
   {
     "body part": "left leg",
-    "description": "A person's left leg moves forward"
+    "description": "A person's left leg moves forward rapidly."
   },
   {
     "body part": "right leg",
-    "description": "A person's right leg moves forward"
+    "description": "A person's right leg moves forward rapidly."
   }
 ]
 ==================================================
