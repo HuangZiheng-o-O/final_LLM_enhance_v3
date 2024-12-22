@@ -1,4 +1,4 @@
-**Breadcrumbstrajectory_guidance_pipeline_and_llm_enhanced_human_motion_generation**
+# Breadcrumbstrajectory_guidance_pipeline_and_llm_enhanced_human_motion_generation
 
 **PLEASE SEE trajectory_guidance/Detailed tests of LLM solutions.md  for detailed test results.**
 
