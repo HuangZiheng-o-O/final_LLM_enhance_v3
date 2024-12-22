@@ -1,4 +1,6 @@
-PLEASE SEE trajectory_guidance/Detailed tests of LLM solutions.md  for detailed test results.
+**Breadcrumbstrajectory_guidance_pipeline_and_llm_enhanced_human_motion_generation**
+
+**PLEASE SEE trajectory_guidance/Detailed tests of LLM solutions.md  for detailed test results.**
 
 
 https://github.com/user-attachments/assets/69ac5f17-daef-430d-ae10-ee82ed2552bb
